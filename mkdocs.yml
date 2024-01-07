@@ -1,1 +1,4 @@
-site_name: My Docs
+site_name: About Alton
+site_url: https://Alton1998.github.io/alton.github.io/
+theme:
+  name: material
