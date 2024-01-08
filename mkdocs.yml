@@ -2,3 +2,15 @@ site_name: About Alton
 site_url: https://Alton1998.github.io/alton.github.io/
 theme:
   name: material
+nav:
+  - About: index.md
+  - Projects:
+    - Arrhythmia Detection:
+    - Corona Virus Detection in Chest X-Rays:
+    - Detect AI Generated Texts:
+  - Learnings:
+    - Python:
+    - Java:
+    - Deep Learning:
+    - NLP:
+    - Image Processing:
