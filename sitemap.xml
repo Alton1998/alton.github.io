@@ -2,7 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Alton1998.github.io/alton.github.io/</loc>
-         <lastmod>2024-01-08</lastmod>
+         <lastmod>2024-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/projects/arrhythmia/</loc>
+         <lastmod>2024-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/projects/chest_x_rays/</loc>
+         <lastmod>2024-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/work_experience/oracle/</loc>
+         <lastmod>2024-05-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
