@@ -469,8 +469,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bacterial-and-viral-pneumonia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacterial and Viral Pneumonia
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
   
 </li>
       
@@ -604,8 +622,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bacterial-and-viral-pneumonia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacterial and Viral Pneumonia
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
   
 </li>
       
@@ -751,6 +787,34 @@ was less compared to ResNET-50 and VGG-19.
 anteroposterior (AP) or in the anteroposterior supine position(AP Supine).</p>
 <p>The COVID images were stored in the following formats:</p>
 <p><img alt="Data Set Format Distribution" src="../img/data_set_format_distribution.png" /></p>
+<h3 id="bacterial-and-viral-pneumonia">Bacterial and Viral Pneumonia</h3>
+<div style='text-align: justify;'>
+In this data set we have a collection of chest X-rays that are either annotated as 
+Pneumonia or Normal. Most of the images present in this dataset are in the AP position only. 
+Pneumonia has about 4273 occurrences in the dataset whereas normal chest X-Rays has about 
+1583 occurrences. 
+After combining all the data our dataset size is 5855 instances of Chest X-ray images and 
+our final data distribution is illustrated in Fig 3
+</div>
+
+<p><img alt="Data Distribution after Preprocessing" src="../img/Screenshot%202024-05-17%20145513.png" /></p>
+<h2 id="data-preparation">Data Preparation</h2>
+<div style='text-align: justify;'>
+After collecting the data we need to ensure that images are copied to a new directory 
+where they have the following structure:
+</div>
+<p><img alt="Folder Structure" src="../img/Screenshot%202024-05-17%20145840.png" /></p>
+<p>20% of the dataset is reserved for testing and 20% of the training data is used for 
+validation.
+We perform the following transformations on the images:
+1. GrayScale Conversion - All the images have the same number of channels, i.e. all the 
+images should either be in RGB or grayscale. For this project we are going to convert all 
+images to grayscale.
+2. Resize - All the images have the same dimensions i.e. 224x224
+3. Center Crop - Crops a given image at the center
+4. Normalize - Normalize a given image with mean = 0.5 and standard deviation = 0.5</p>
+<p>After doing the aforementioned processes our images will look as illustrated in Fig 4.</p>
+<p><img alt="Chest X-Ray images" src="../img/Screenshot%202024-05-17%20150052.png" /></p>
 
 
 
