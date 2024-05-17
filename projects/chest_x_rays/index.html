@@ -950,32 +950,32 @@ steps:</p>
 <ol>
 <li>Retrieve Test Image - The code retrieves the test image at the current index from the 
 x_test tensor. This test image represents the data point that we want to classify.
-</br></li>
+<br/></li>
 <li>Calculate Distances to Training Set - The code calculates the Euclidean distance between 
 the test image and every image in the training set. The Euclidean distance is a measure 
 of similarity between two vectors. In this case, it represents the dissimilarity between the 
 test image and each training image. The distances are stored in the distance tensor.</li>
 </ol>
 <p><img alt="Euclidean Distance" src="../img/Screenshot%202024-05-17%20153803.png" />
-</br>
+<br/>
 3. Identify K Nearest Neighbors - The code identifies the k nearest neighbors of the test 
 image. This involves finding the k training images that have the smallest distances to the 
 test image. The torch.topk() function is used to select the k smallest distances and their 
 corresponding indices. The indices are stored in the indexes tensor.
-</br>
+<br/>
 4. Gather Class Labels of Nearest Neighbors - The code gathers the class labels of the k 
 nearest neighbors using the torch.gather() function. The class labels are stored in the 
 classes tensor.
-</br>
+<br/>
 5. Determine Majority Class - The code determines the majority class label among the k 
 nearest neighbors using the torch.mode() function. The majority class label is the class 
 label that occurs most frequently among the nearest neighbors. The majority class label 
 is stored in the mode variable.
-</br>
+<br/>
 6. Assign Predicted Class - The code assigns the majority class label to the test image as its 
 predicted class. This means that the test image is classified as the class that is most 
 represented among its k nearest neighbors.
-</br></p>
+<br/></p>
 
 
 
