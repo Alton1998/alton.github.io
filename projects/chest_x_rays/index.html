@@ -492,6 +492,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#building-our-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building our model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building our model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knn" class="md-nav__link">
+    <span class="md-ellipsis">
+      KNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -642,6 +675,39 @@
       Data Preparation
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-our-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building our model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building our model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knn" class="md-nav__link">
+    <span class="md-ellipsis">
+      KNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -815,6 +881,93 @@ images to grayscale.
 4. Normalize - Normalize a given image with mean = 0.5 and standard deviation = 0.5</p>
 <p>After doing the aforementioned processes our images will look as illustrated in Fig 4.</p>
 <p><img alt="Chest X-Ray images" src="../img/Screenshot%202024-05-17%20150052.png" /></p>
+<p>Optionally we also use Fourier Transform, to see whether we can improve the results.</p>
+<p><img alt="Fourier Transform Images" src="../img/Screenshot%202024-05-17%20150550.png" /></p>
+<h2 id="building-our-model">Building our model</h2>
+<h3 id="cnn">CNN</h3>
+<p>In this project, rather than use a pretrained model, we built our own CNN Model. Our CNN 
+model architecture is as follows:
+1. Input Convolution layer: This layer has a width of 224 and height of 224 and is composed 
+of a single channel and is processed through the convolution layer with a filter size of 7 
+and stride of 4. 16 filters are used here. Our output dimensions here are 55x55x16
+2. 1st Hidden Convolution layer: The output dimensions in the previous layer serves as the 
+input here. We have 32 filters in this layer with a filter size of 5 and stride of 2. Our output 
+dimensions are then 26x26x32
+3. 1st Max Pooling Layer: The output of the previous layer is then subject to max pooling 
+where the kernel size is 3 and stride is 2. The output dimensions here are 12x12x32
+4. First Batch Normalisation layer: Batch Normalisation is performed here to speed up the 
+learning process. Output dimensions are the same as the input dimensions.
+5. 2nd Hidden Convolution layer: The input size here is 12x12x32 which then undergoes 
+convolution through 64 filters with kernel size of 3 and stride of 1. The output dimension 
+here then would be 10x10x64
+6. 3rd Hidden Convolution layer: The input size is 10x10x64 which then undergoes 
+convolution through 128 filters of kernel size 3 with a stride of 1. The output dimension 
+here would then be 8x8x128
+7. 2nd Max Pool layer: The input size is 8x8x128 which undergoes max pooling against 
+kernel of size 3 with stride 1. The output dimension produced here is 6x6x128
+8. 2nd Batch Normalisation layer: Batch Normalisation is performed here to speed up the 
+learning process. Output dimensions are the same as the input dimensions.
+9. Flatten Layer: The output of the Batch Normalisation layer is then flattened so that the 
+dimensions are 1x4608
+10. 1st Hidden Fully Connected Layer: The input size here is 1x4608 and the output size here 
+1x100.
+11. 1st Dropout layer: The dropout percentage is 50%
+12. 2nd Hidden Fully Connected Layer: The input size here is 1x100 and the output size here 
+is 1x50.
+13. 2nd Dropout layer: The dropout percentage is 50%
+14. Output layer: This is a fully connected layer whose input size is 1x50 and output is 1x3.
+The activation used throughout except in the output layer is ReLU which is given in Eq5.
+The output for each convolution is,</p>
+<p><img alt="Output Equation" src="../img/Screenshot%202024-05-17%20151107.png" /></p>
+<p>Where Ni is the number of data in a batch and Cout denotes the number of output channels, Cin 
+denotes the number of input channels.
+The output dimensions for the convolution layer are determined by the following formulas:
+<img alt="Output Dimension Calculation" src="../img/Screenshot%202024-05-17%20151401.png" />
+Where Hout and Wout are the output height and width and our final dimensions are 
+(Hout,Wout,Cout). In this case padding is 0 and dilation by default is 1 for all our convolution 
+layers. 
+The output for our MaxPool Layers is given in the following equation:</p>
+<p><img alt="Equation for maxpool layers" src="../img/Screenshot%202024-05-17%20152121.png" />
+Where h and w are our kernel sizes used in the max pooling layer.
+If the input dimensions to the max pool layer is (N,C,H,W) then our output dimensions will be 
+(N,C,Hout,Wout) where Hout and Wout calculations are given in Eq2.
+Our batch normalization layers follow the calculations given in Eq4.</p>
+<p><img alt="Batch Normalisation Equation" src="../img/Screenshot%202024-05-17%20152525.png" />
+Where y is the output for a given x value and E[x] and Var[x] are the mean and variance and 
+sqrt(Var(x)) is the standard deviation. These are calculated for a given batch. Gamma and Beta 
+are learnable parameters. These vector sizes are the same as the channel size for the given 
+input.</p>
+<p><img alt="RELU" src="../img/Screenshot%202024-05-17%20152754.png" /></p>
+<p>The optimiser used for optimization is the Adam Optimizer which is given in Fig 7.</p>
+<p><img alt="Optimiser" src="../img/Screenshot%202024-05-17%20153045.png" />
+The loss function used is Cross Entropy which is given Eq6.
+<img alt="Loss Function" src="../img/Screenshot%202024-05-17%20153507.png" /></p>
+<h3 id="knn">KNN</h3>
+<p>The KNN algorithm implemented in this project doesn't have a traditional architectural 
+design like a neural network. It follows a more straightforward approach based on distance 
+calculations and majority voting.The KNN algorithm implemented in this project follows these 
+steps:
+1. Retrieve Test Image - The code retrieves the test image at the current index from the 
+x_test tensor. This test image represents the data point that we want to classify.
+2. Calculate Distances to Training Set - The code calculates the Euclidean distance between 
+the test image and every image in the training set. The Euclidean distance is a measure 
+of similarity between two vectors. In this case, it represents the dissimilarity between the 
+test image and each training image. The distances are stored in the distance tensor.</p>
+<p><img alt="Euclidean Distance" src="../img/Screenshot%202024-05-17%20153803.png" />
+3. Identify K Nearest Neighbors - The code identifies the k nearest neighbors of the test 
+image. This involves finding the k training images that have the smallest distances to the 
+test image. The torch.topk() function is used to select the k smallest distances and their 
+corresponding indices. The indices are stored in the indexes tensor.
+4. Gather Class Labels of Nearest Neighbors - The code gathers the class labels of the k 
+nearest neighbors using the torch.gather() function. The class labels are stored in the 
+classes tensor.
+5. Determine Majority Class - The code determines the majority class label among the k 
+nearest neighbors using the torch.mode() function. The majority class label is the class 
+label that occurs most frequently among the nearest neighbors. The majority class label 
+is stored in the mode variable.
+6. Assign Predicted Class - The code assigns the majority class label to the test image as its 
+predicted class. This means that the test image is classified as the class that is most 
+represented among its k nearest neighbors.</p>
 
 
 
