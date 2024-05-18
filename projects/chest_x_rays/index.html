@@ -525,6 +525,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cnn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      KNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -708,6 +750,48 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cnn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      KNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
   
 </li>
       
@@ -990,6 +1074,29 @@ is stored in the mode variable.
 predicted class. This means that the test image is classified as the class that is most 
 represented among its k nearest neighbors.
 <br/></p>
+<h2 id="training">Training</h2>
+<h3 id="cnn_1">CNN</h3>
+<p>We run the training for the CNN model we have designed for about 30 epochs, but the 
+model doesn't necessarily train for 30 epochs since we add an early stopping condition i.e. training 
+is stopped as soon as validation loss exceeds the training loss. In addition to early stopping we 
+have dropout layers in place which prevent overfitting.</p>
+<p><img alt="Training History" src="../img/Screenshot%202024-05-17%20205303.png" /></p>
+<p><img alt="Training history Fourier" src="../img/Screenshot%202024-05-17%20205435.png" /></p>
+<h3 id="knn_1">KNN</h3>
+<p>The model defines a list of k_values, representing the possible values for the k 
+hyperparameter in the KNN algorithm. It then iterates through these values, training and 
+evaluating a KNN model for each k value.</p>
+<p>For each k value, the code calls the model to train and evaluate the KNN model. The 
+models take the training data , test data , and the k value as input. The code evaluates the 
+performance of each KNN model by comparing the predicted labels to the actual labels. It 
+calculates the number of correctly predicted labels and the accuracy. The accuracy represents 
+the percentage of test images that were correctly classified.
+The code tracks the highest accuracy achieved so far and the corresponding k value. This 
+allows it to identify the optimal k value for the given dataset.</p>
+<p><img alt="KNN Training" src="../img/Screenshot%202024-05-17%20205645.png" /></p>
+<h2 id="evaluation">Evaluation</h2>
+<p><img alt="Results" src="../img/Screenshot%202024-05-17%20205749.png" />
+<img alt="Results1" src="../img/Screenshot%202024-05-17%20205909.png" /></p>
 
 
 
