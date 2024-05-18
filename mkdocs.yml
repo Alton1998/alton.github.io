@@ -1,8 +1,17 @@
 site_name: Alton Lavin D'souza
 site_url: https://Alton1998.github.io/alton.github.io/
 plugins:
-  - blog
+  - blog:
+      blog_dir: blog/
+      categories_pagination: true
   - search
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
 theme:
   name: material
   features:
@@ -14,6 +23,7 @@ nav:
   - Projects:
     - Arrhythmia Detection: projects/arrhythmia.md
     - Corona Virus Detection in Chest X-Rays: projects/chest_x_rays.md
+    - Tensor Processing Unit: projects/tpu.md
   - Blog: blog/index.md
     # - Detect AI Generated Texts:
     # - Creating A 
