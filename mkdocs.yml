@@ -1,7 +1,12 @@
 site_name: Alton Lavin D'souza
 site_url: https://Alton1998.github.io/alton.github.io/
+plugins:
+  - blog
+  - search
 theme:
   name: material
+  features:
+    - navigation.indexes
 nav:
   - About: index.md
   - Work Experience:
@@ -9,6 +14,7 @@ nav:
   - Projects:
     - Arrhythmia Detection: projects/arrhythmia.md
     - Corona Virus Detection in Chest X-Rays: projects/chest_x_rays.md
+  - Blog: blog/index.md
     # - Detect AI Generated Texts:
     # - Creating A 
   # - Learnings:

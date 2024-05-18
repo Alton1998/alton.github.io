@@ -286,3 +286,31 @@ represented among its k nearest neighbors.
 ## Training
 
 ### CNN
+We run the training for the CNN model we have designed for about 30 epochs, but the 
+model doesn't necessarily train for 30 epochs since we add an early stopping condition i.e. training 
+is stopped as soon as validation loss exceeds the training loss. In addition to early stopping we 
+have dropout layers in place which prevent overfitting.
+
+![Training History](./img/Screenshot%202024-05-17%20205303.png)
+
+![Training history Fourier](./img/Screenshot%202024-05-17%20205435.png)
+
+### KNN
+The model defines a list of k_values, representing the possible values for the k 
+hyperparameter in the KNN algorithm. It then iterates through these values, training and 
+evaluating a KNN model for each k value.
+
+For each k value, the code calls the model to train and evaluate the KNN model. The 
+models take the training data , test data , and the k value as input. The code evaluates the 
+performance of each KNN model by comparing the predicted labels to the actual labels. It 
+calculates the number of correctly predicted labels and the accuracy. The accuracy represents 
+the percentage of test images that were correctly classified.
+The code tracks the highest accuracy achieved so far and the corresponding k value. This 
+allows it to identify the optimal k value for the given dataset.
+
+![KNN Training](./img/Screenshot%202024-05-17%20205645.png)
+
+## Evaluation
+
+![Results](./img/Screenshot%202024-05-17%20205749.png)
+![Results1](./img/Screenshot%202024-05-17%20205909.png)
