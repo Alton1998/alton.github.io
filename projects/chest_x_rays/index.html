@@ -14,7 +14,7 @@
         <link rel="prev" href="../arrhythmia/">
       
       
-        <link rel="next" href="../../blog/">
+        <link rel="next" href="../tpu/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -288,6 +288,8 @@
   
     
     
+      
+        
       
         
       
@@ -582,10 +584,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tensor Processing Unit
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -827,6 +868,24 @@
   <a href="#evaluation" class="md-nav__link">
     <span class="md-ellipsis">
       Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1133,7 +1192,77 @@ allows it to identify the optimal k value for the given dataset.</p>
 <p><img alt="KNN Training" src="../img/Screenshot%202024-05-17%20205645.png" /></p>
 <h2 id="evaluation">Evaluation</h2>
 <p><img alt="Results" src="../img/Screenshot%202024-05-17%20205749.png" />
-<img alt="Results1" src="../img/Screenshot%202024-05-17%20205909.png" /></p>
+<img alt="Results1" src="../img/Screenshot%202024-05-17%20205909.png" />
+<img alt="Results2" src="../img/Screenshot%202024-05-17%20214857.png" /></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this project we have done the following experiments:
+1. CNN model training with Chest X-Ray images and also their fourier transform images.
+2. KNN model training with Chest X-Ray images.
+There were no significant improvements in the results when the fourier transformed images used 
+for training in CNN. But with the fourier transformed images, the accuracy to classify COVID-19 
+is slightly higher, but overall there is not much improvement. Although CNN has a higher accuracy 
+than KNN, there are more computations involved, so it might be better to rely on KNN for resource 
+constraint applications of triaging COVID-19 patients. However KNN is not scalable so it's better 
+to rely on Deep CNN for improvements. To improve the model, structural optimization might need 
+to be carried out. Also, we could try the Transfer Learning approach, by training the network on 
+the Image Net data then on the Covid data. To appropriately benchmark our data, we should use 
+the COVIDx dataset, since the latest model COVID-NET has been trained on it and this is the 
+model to beat. Overall, our model doesn’t perform as well as the reviewed works and more work 
+needs to be done to make the model better. Also, for KNN rather than training on raw data, we 
+need to see how well it performs on the feature vectors obtained from CNN.</p>
+<h2 id="references">References</h2>
+<p>[1]. ist COVID, W. What is COVID-19?.
+</br>
+[2]. Mangal, A., Kalia, S., Rajgopal, H., Rangarajan, K., Namboodiri, V., Banerjee, S., &amp; Arora, C. 
+(2020). CovidAID: COVID-19 detection using chest X-ray. arXiv preprint arXiv:2004.09803.
+</br>
+[3]. Narin, A., Kaya, C., &amp; Pamuk, Z. (2021). Automatic detection of coronavirus disease (covid19) using x-ray images and deep convolutional neural networks. Pattern Analysis and 
+Applications, 24, 1207-1220.
+</br>
+[4]. Khan, A. I., Shah, J. L., &amp; Bhat, M. M. (2020). CoroNet: A deep neural network for detection 
+and diagnosis of COVID-19 from chest x-ray images. Computer methods and programs in 
+biomedicine, 196, 105581.
+</br>
+[5]. Ozturk, T., Talo, M., Yildirim, E. A., Baloglu, U. B., Yildirim, O., &amp; Acharya, U. R. (2020). 
+Automated detection of COVID-19 cases using deep neural networks with X-ray images. 
+Computers in biology and medicine, 121, 103792.
+</br>
+[6]. Shen, M., Zhou, Y., Ye, J., Abdullah AL-maskri, A. A., Kang, Y., Zeng, S., &amp; Cai, S. (2020). 
+Recent advances and perspectives of nucleic acid detection for coronavirus. Journal of 
+Pharmaceutical Analysis, 10(2), 97–101. https://doi.org/10.1016/j.jpha.2020.02.010 
+</br>
+[7] Yashavantha Rao, H. C., &amp; Jayabaskaran, C. (2020). The emergence of a novel coronavirus 
+(sars‐cov‐2) disease and their neuroinvasive propensity may affect in covid‐19 patients. Journal 
+of Medical Virology, 92(7), 786–790. https://doi.org/10.1002/jmv.25918 
+</br>
+[8] Teymouri, M., Mollazadeh, S., Mortazavi, H., Naderi Ghale-noie, Z., Keyvani, V., Aghababaei, 
+F., Hamblin, M. R., Abbaszadeh-Goudarzi, G., Pourghadamyari, H., Hashemian, S. M., &amp; Mirzaei, 
+H. (2021). Recent advances and challenges of RT-PCR tests for the diagnosis of COVID-19. 
+Pathology - Research and Practice, 221, 153443. https://doi.org/10.1016/j.prp.2021.153443 
+</br>
+[9] Das, S., Ayus, I., &amp; Gupta, D. (2023). A comprehensive review of covid-19 detection with 
+machine learning and Deep Learning Techniques. Health and Technology, 13(4), 679–692. 
+https://doi.org/10.1007/s12553-023-00757-z 
+</br>
+[10]. Wang, L., Lin, Z. Q., &amp; Wong, A. (2020). Covid-net: A tailored deep convolutional neural 
+network design for detection of covid-19 cases from chest x-ray images. Scientific reports, 10(1), 
+19549.
+</br>
+[11]. Cohen, J. P., Morrison, P., &amp; Dao, L. (2020). COVID-19 image data collection. arXiv preprint 
+arXiv:2003.11597.
+</br>
+[12]. https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html
+</br>
+[13]. https://pytorch.org/docs/stable/generated/torch.nn.MaxPool2d.html
+</br>
+[14]. https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html
+</br>
+[15]. https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html
+</br>
+[16]. https://pytorch.org/docs/stable/generated/torch.optim.Adam.html
+</br>
+[17]. https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html
+</br></p>
 
 
 
