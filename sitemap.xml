@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/2024/01/31/hello-world/</loc>
+         <lastmod>2024-05-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Alton1998.github.io/alton.github.io/projects/arrhythmia/</loc>
          <lastmod>2024-05-18</lastmod>
          <changefreq>daily</changefreq>
@@ -22,6 +27,21 @@
     </url>
     <url>
          <loc>https://Alton1998.github.io/alton.github.io/work_experience/oracle/</loc>
+         <lastmod>2024-05-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/archive/2024/</loc>
+         <lastmod>2024-05-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/category/hello/</loc>
+         <lastmod>2024-05-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/category/world/</loc>
          <lastmod>2024-05-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
