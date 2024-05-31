@@ -1,15 +1,5 @@
----
-draft: false 
-date: 2024-05-31
-authors:
-  - alton
-categories:
-  - LLMs
-  - NLP
-  - RAG
-  - Fine Tuning
----
-# Why go for RAG over Finetuning?
+# Why go for RAG?
+
 ## Overview
 
 In this project we choose a foundational model i.e. GPT or BERT and create an API that makes it easy to interact with the LLM.
@@ -28,7 +18,7 @@ To create a chat bot we have 2 approaches:
 - Fine tuning existing foundational models on medical data set
 - Create a Retrieval augmented generation framework which is used for retrieving facts from an external knowledge
 
-![Comparisons](./pics/Screenshot%202024-05-31%20122720.png)
+![Comparisons](./pics/Screenshot%202024-05-31%20122720.pnggit )
 
 ### Fine tuning existing foundation models on medical data set 
 
@@ -58,9 +48,7 @@ RAG allows to create embeddings easily and allows for a fast deployment option.
 
 ## Architecture
 
-
-
-
+![Architecture](./pics/AI_copilot_service.drawio.png)
 ## References
 
 - https://arxiv.org/pdf/2401.08406
