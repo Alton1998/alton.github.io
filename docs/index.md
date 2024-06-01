@@ -139,4 +139,3 @@ This project involved the full custom design of a multiply and accumulate unit (
 - **Email:** [altondsouza02@gmail.com](mailto:altondsouza02@gmail.com)
 - **GitHub:** [Alton1998](https://github.com/Alton1998)
 - **LinkedIn:** [alton-dsouza-539ba1217](https://www.linkedin.com/in/alton-dsouza-539ba1217/)
-```
