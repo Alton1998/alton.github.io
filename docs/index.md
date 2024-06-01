@@ -136,10 +136,7 @@ This project involved the full custom design of a multiply and accumulate unit (
 
 ## Contact
 
-- **Address:** Juniper House, University of Alberta, 0L08-11018 87 Ave NW, Edmonton AB T6G 0X6
-- **Phone:** +1 (780) 710-8605
 - **Email:** [altondsouza02@gmail.com](mailto:altondsouza02@gmail.com)
-- **Website:** [alton.github.io](https://alton.github.io)
 - **GitHub:** [Alton1998](https://github.com/Alton1998)
 - **LinkedIn:** [alton-dsouza-539ba1217](https://www.linkedin.com/in/alton-dsouza-539ba1217/)
 ```
