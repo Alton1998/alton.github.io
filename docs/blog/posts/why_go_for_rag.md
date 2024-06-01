@@ -1,3 +1,13 @@
+---
+draft: false 
+date: 2024-05-31
+authors:
+  - alton
+categories:
+  - LLMs
+  - NLP
+  - VectorDB
+---
 # Why go for RAG?
 
 ## Overview
@@ -18,7 +28,7 @@ To create a chat bot we have 2 approaches:
 - Fine tuning existing foundational models on medical data set
 - Create a Retrieval augmented generation framework which is used for retrieving facts from an external knowledge
 
-![Comparisons](./pics/Screenshot%202024-05-31%20122720.pnggit )
+![Comparisons](./pics/Screenshot%202024-05-31%20122720.png)
 
 ### Fine tuning existing foundation models on medical data set 
 
