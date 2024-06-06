@@ -75,3 +75,80 @@ up matrix multiply calculations for QR decomposition and
 linear systems by distributing these in the matrix multiplication
 units in Google’s Tensor Processing Units.
 </div>
+<div style='text-align: justify;'>
+[6] Pramesh Pandey et al. proposes a low power near threshold TPU design without affecting the inference accuracies. The
+way they achieve this is by identifying error-causing activation
+sequences in the systolic array and preventing timing errors
+from the same sequence by booting the operating voltage
+for specific multiply and accumulate (MAC) units. The paper
+improves the performance of a TPU by 2-3 times without
+compromising the inference accuracies.
+</div>
+<div style='text-align: justify;'>
+[7] Pramesh Pandey et al. proposes a way to solve the
+problem of underutilization of TPU systolic arrays. In their
+work they create of profile for idleness of the MAC units for
+different batch sizes. Also, they come up with an approach
+“UPTPU”, a low overhead power gating solution that can adapt
+to various batch sizes and zero weight computations
+</div>
+<div style='text-align: justify;'>
+[8] Norman P. Jouppi et al. evaluate Google’s Tensor
+Processing Unit (TPU), a custom ASIC accelerator for neural
+network inference deployed in their data centers since 2015.
+At the heart of the TPU is a 65,536 8-bit multiply-accumulate
+(MAC) matrix unit offering 92 TeraOps/s peak throughput
+and a large 28MB software-managed on-chip memory. The
+TPU’s deterministic execution model better matches the 99th
+percentile response time requirements compared to the varying optimizations of CPUs/GPUs aimed at boosting average
+throughput. The TPU’s relatively small size and low power are
+attributed to the lack of such complex features. Benchmarking
+using production neural nets representing 95% of datacenter
+inference demand, the TPU demonstrated 15X-30X higher
+performance and 30X-80X better TOPS/Watt compared to
+contemporary Haswell CPUs and K80 GPUs. Using the GPU’s
+GDDR5 memory could potentially triple the TPU’s TOPS and
+boost TOPS/Watt to 70X the GPU and 200X the CPU.
+</div>
+<div style='text-align: justify;'>
+[9] Yang Ni et al. perform comprehensive characterization
+of the performance and power consumption of Google’s Edge
+TPU accelerator for deep learning inference. They generate
+over 10,000 neural network models and measure their execution time and power on the Edge TPU. Key findings reveal non-linear relationships between metrics like the number
+of MACs and performance/power. Critical factors like onchip/off-chip memory usage are identified as having significant
+impact. Based on this characterization, the authors propose
+PETET, a machine learning-based modeling framework that
+can accurately predict Edge TPU performance and power
+consumption online with less than 10% error for new models.
+</div>
+<div style='text-align: justify;'>
+[10] Kiran Seshadri et.al provide an in-depth analysis of the
+Fig. 3. Binary multiplication for 8 bits
+microarchitecture and performance characteristics of Google’s
+Edge TPU accelerators for low-power edge devices. The
+authors first discuss the key microarchitectural details of three
+different classes of Edge TPUs spanning different computing
+ecosystems. They then present an extensive evaluation across
+423K unique convolutional neural network (CNN) models to
+comprehensively study how these accelerators perform with
+varying CNN structures.
+</div>
+
+## Functional Requirements
+
+The proposed MAC unit should meet the following requirements:
+• Implement high-performance multiplication and addition circuits capable of performing parallel multiplyaccumulate operations.
+• Support configurable precision data formats to accommodate different neural network models and applications.
+• Ensure low latenct and high throughput for the core
+matrix multiplication operations
+• Implement strategies for efficient accumulation and storage of partial results.
+• The operating frequency of atleast 1.2GHz.
+• The MAC unit should satisfy equation (5).
+• The inputs to the weights and inputs that the MAC unit
+accepts is 8 bits each.
+• The final output is 24 bits.
+• The multiplier should produce a 16 bit output as shown
+in Fig. 3.
+
+
+![Tensor Processor Unit](./img/Screenshot%202024-06-05%20224412.png)
