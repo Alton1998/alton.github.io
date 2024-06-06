@@ -43,5 +43,35 @@ generator and discriminator.
 ![Equations](img/Screenshot%202024-05-17%20224230.png)
 <div style='text-align: justify;'>
 While there are several different hardware architectures for
-DNN acceleration, systolic array based implementations are
+DNN acceleration, systolic array based implementations areshown to be most promising.The advantage with using systolic array based implementations that there need for buffering
+the inputs and routing is less complex. Theoretically, this
+should be energy efficient because we reducing the frequent
+reads for the weights and inputs. A general architecture for
+systolic based hardware architectures is shown in Fig. 1. MAC
+unit implementation is shown in Fig. 2 which is what we try
+to design in this project
+</div>
+
+![Systolic array General Architecture](./img/Screenshot%202024-06-05%20222645.png)
+
+![MAC Unit Design](./img/Screenshot%202024-06-05%20222800.png)
+
+## Literature Review
+
+
+<div style='text-align: justify;'>
+[4] Kuan-Chieh Hsu et al. proposes a General Purpose
+Computing architecture built on Edge Tensor Processing Units.This is an open source framework which allows researchers
+to easily use Neural Network accelerators for various applications. It was found that the proposed architecture is 2.46
+times faster than CPU and the energy consumption is reduced
+by 40%. The aforementioned Edge Tensor Processing used is a
+trimmed down version of Google Cloud TPU i.e it has smaller
+data memory .
+</div>
+<div style='text-align: justify;'>
+[5] Adam G. M. Lewis et al. in their paper have shown how
+to repurpose for large-scale scientific computation. They speed
+up matrix multiply calculations for QR decomposition and
+linear systems by distributing these in the matrix multiplication
+units in Google’s Tensor Processing Units.
 </div>
