@@ -199,3 +199,15 @@ bit adder as show in Fig.
 
 ## Design Alternatives
 An alternative to the MAC unit is discussed in this section.
+
+### Multiplier
+The hardware needed here if N was the number of bits we
+would need 8x8 hardware as shown in Fig. 8 and is much
+faster.
+
+![CLA Design](./img/Screenshot%202024-06-05%20232338.png)
+
+![CLA Design 2](./img/Screenshot%202024-06-05%20232851.png)
+
+![CLA Truth Table](./img/Screenshot%202024-06-05%20232953.png)
+
