@@ -243,5 +243,131 @@ For practical purposes we will calculate the power consumption we will use equa
 
 ![Alternative Adder Design](./img/Screenshot%202024-06-05%20235542.png)
 
+### Floor Plan and Area Calculations
+In this section before implementing the design we draw out
+the floor plan for each of circuits. Fig. 10, 11 and 12 show
+the floor plan design and area calculated.
+
+### Input Output Signals and Power
+From Fig. 11 the input signals are
+I0−I7(inputs), W0−W7(weights), A0−A23(partial products)
+
+Output Signals from Fig. 11 are
+O0 − O2
+
+Power signal from the same diagram is
+VDD
+
+GND -
+VSS
+
+### SCHEMATIC DESIGN
+In all of the schematic design we have used static CMOS
+logic. In Table II the sizes and timing information of the
+gates used in building the multipliers and adders has been
+summarized.
+
+![floor Plan](./img/Screenshot%202024-06-06%20005143.png)
+
+## Physical Layout Design
+<div style='text-align: justify;'>
+The physical layout was made using the sticks diagram such
+that we tried to use merged contacts as much as possible. The
+design approach for the layouts was as follows:
+</div>
+<div style='text-align: justify;'>
+• First a graph representation of the schematics for all our
+circuits was created.
+</div>
+<div style='text-align: justify;'>
+• We tried to create a Eulerian path such the number of
+diffusion regions was reduced.
+</div>
+<div style='text-align: justify;'>
+• Create short wires but using higher level of metal. In our
+implementation upto Metal 3 was used.
+</div>
+<div style='text-align: justify;'>
+• The VDD and VSS signals were created with Metal 1
+layers
+</div>
+
+
+## SUMMARY OF DATA FLOW
+
+Two 8bit numbers are loaded into the multiplier in the MAC
+unit, The values are loaded by driving the LOAD bit high for
+atleast one clock cycle and remains low for the rest. Also,
+the partial products are loaded into the adder. The multiplier
+performs shifting and ANDs the outputs of the scan registers
+and sends the output to the adder.
+
+## Results
+
+We made a full custom MAC unit whose area is 250 x 173
+µm
+and can operate at frequency of 0.167 GHz
+
+![Multiplier Floor Plan](./img/Screenshot%202024-06-06%20010155.png)
+
+![Tables](./img/Screenshot%202024-06-06%20010316.png)
+
+![AND Design](./img/Screenshot%202024-06-06%20010446.png)
+
+![All Designs](./img/Screenshot%202024-06-06%20010610.png)
+
+## Future Scope
+
+For the future scope of this project re-design the MAC unit
+with a smaller pmos and nmos ratio. Also, we could redesign
+our circuits with adiabatic logic.
+
+## Conclusion
+Circuit sizes are much larger thatn the 45nm standard cell
+library. We should use an nmos size that is ≤ 1um, since we
+did not do that our circuits are much larger. The MAC unit so
+designed in this project is not suitalbe for scalar multiplication
+since we need speeds ≥ 1GHz. Scan Flip Flop Multiplier uses
+less hardware but we need to synchronize when we load and
+shift patterns, so clocking is more complicated.
+## References
+[1] R. Ferenc, T. Viszkok, T. Aladics, J. J ´ asz, and P. Heged ´ us, “Deep- ˝
+water framework: The Swiss army knife of humans working with
+machine learning models,” SoftwareX, vol. 12, p. 100551, Jul. 2020,
+doi: 10.1016/j.softx.2020.100551.
+[2] N. Shrivastava, M. A. Hanif, S. Mittal, S. R. Sarangi, and M. Shafique,
+“A survey of hardware architectures for generative adversarial networks,”
+Journal of Systems Architecture, vol. 118, p. 102227, Sep. 2021, doi:
+10.1016/j.sysarc.2021.102227.
+[3] J. Zhang, K. Rangineni, Z. Ghodsi, and S. Garg, “Thundervolt,” Research Gate, Jun. 2018, doi: 10.1145/3195970.3196129.
+[4] K.-C. Hsu and H.-W. Tseng, “Accelerating applications using edge
+tensor processing units,” SC ’21: Proceedings of the International
+Conference for High Performance Computing, Networking, Storage and
+Analysis, pp. 1–14, Nov. 2021, doi: 10.1145/3458817.3476177.
+[5] A. G. M. Lewis, J. Beall, M. Ganahl, M. Hauru, S. B. Mallick, and G. Vidal, “Large-scale distributed linear algebra with tensor processing units,”
+Proceedings of the National Academy of Sciences of the United States
+of America, vol. 119, no. 33, Aug. 2022, doi: 10.1073/pnas.2122762119.
+[6] P. Pandey, P. Basu, K. Chakraborty, and S. Roy, “GreenTPU,” DAC ’19:
+Proceedings of the 56th Annual Design Automation Conference 2019,
+pp. 1–6, Jun. 2019, doi: 10.1145/3316781.3317835.
+[7] P. Pandey, N. D. Gundi, K. Chakraborty and S. Roy, ”UPTPU: Improving
+Energy Efficiency of a Tensor Processing Unit through Underutilization Based Power-Gating,” 2021 58th ACM/IEEE Design Automation
+Conference (DAC), San Francisco, CA, USA, 2021, pp. 325-330, doi:
+10.1109/DAC18074.2021.9586224.
+[8] Norman P. Jouppi, Cliff Young, Nishant Patil, David Patterson, et
+al., Google, Inc., Mountain View, CA USA 2017. In-Datacenter
+Performance Analysis of a Tensor Processing Unit. In Proceedings
+of ISCA ’17, Toronto, ON, Canada, June 24-28, 2017, 12 pages.
+https://doi.org/10.1145/3079856.308024.
+[9] Ni, Y., Kim Y., Rosing, T., Imani, M. (2022). Online performance
+and power Prediction for Edge TPU via comprehensive characterization. 2022 Design, Automation ; Test in Europe Conference .
+https://doi.org/10.23919/date54114.2022.9774764.
+[10] Yazdanbakhsh, A., Seshadri, K., Akin, B., Laudon, J., Narayanaswami,
+R. (2022). An Evaluation of Edge TPU Accelerators for Convolutional
+Neural Networks. IEEE International Symposium on Workload Characterization (IISWC). https://doi.org/10.1109/iiswc55918.2022.00017.
+
+
+
+
 
 
