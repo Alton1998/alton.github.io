@@ -136,19 +136,16 @@ varying CNN structures.
 
 ## Functional Requirements
 
-The proposed MAC unit should meet the following requirements:
-- Implement high-performance multiplication and addition circuits capable of performing parallel multiplyaccumulate operations.
-- Support configurable precision data formats to accommodate different neural network models and applications.
-- Ensure low latenct and high throughput for the core
-matrix multiplication operations
-- Implement strategies for efficient accumulation and storage of partial results.
+The proposed MAC unit should meet the following requirements:
+- Implement high-performance multiplication and addition circuits capable of performing parallel multiply accumulate operations.
+- Support configurable precision data formats to accommodate different neural network models and applications.
+- Ensure low latenct and high throughput for the core matrix multiplication operations
+- Implement strategies for efficient accumulation and storage of partial results.
 - The operating frequency of atleast 1.2GHz.
 - The MAC unit should satisfy equation (5).
-- The inputs to the weights and inputs that the MAC unit
-accepts is 8 bits each.
+- The inputs to the weights and inputs that the MAC unit accepts is 8 bits each.
 - The final output is 24 bits.
-- The multiplier should produce a 16 bit output as shown
-in Fig. 3.
+- The multiplier should produce a 16 bit output as shown in Fig. 3.
 
 
 ![Tensor Processor Unit](./img/Screenshot%202024-06-05%20224412.png)
