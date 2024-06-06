@@ -211,3 +211,24 @@ faster.
 
 ![CLA Truth Table](./img/Screenshot%202024-06-05%20232953.png)
 
+### Adder
+An alternative adder would be the Carry Select Adder which
+is one of the fastest adders as shown in Fig. 9
+
+## Design Calculations
+
+### Determining NMOS/PMOS ratio
+This ratio helps us size opir pmos given a nmos width. It is
+common for us to make use of equation 10. However, in reality we consider the ratio to be √
+2
+To find this ratio we find the delays of 1-0 and 0-1
+transitions and the rise and fall times. Ideally we want all
+these times to be equal, but its not possible.
+
+
+![Multiplier Design](./img/Screenshot%202024-06-05%20234303.png)
+
+![Alternative Adder Design](./img/Screenshot%202024-06-05%20235542.png)
+
+
+
