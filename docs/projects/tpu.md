@@ -225,6 +225,19 @@ To find this ratio we find the delays of 1-0 and 0-1
 transitions and the rise and fall times. Ideally we want all
 these times to be equal, but its not possible.
 
+### Determining Fastest Clock Period
+
+To determine the fastest clock cycle we need to run our
+simulations is Fast-Fast process variation we use the equations
+(11), (12) and (13). But, for our implementation we will lean
+towards equation (13).
+
+### Determining Power Consumption
+For practical purposes we will calculate the power consumption we will use equation (14).
+
+![Equations](./img/Screenshot%202024-06-06%20003007.png)
+
+
 
 ![Multiplier Design](./img/Screenshot%202024-06-05%20234303.png)
 
