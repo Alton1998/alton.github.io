@@ -170,3 +170,32 @@ in Fig. 3.
 
 
 ![Tensor Processor Unit](./img/Screenshot%202024-06-05%20224412.png)
+
+## Design
+In this section we discuss the design we wish to implement in our project.
+
+### Multiplier
+
+<div style='text-align: justify;'>
+In the design of the multiplier as shown in Fig. 4we make
+use of scan flip flops that allows us to load the values and
+shift them. Load bit stays high for one bit to allow us to load
+the values in the scan registers and in the next clock cycle the load bit is low which allows us to shift the values. Fig. 5
+shows how a scan flip flop is designed using multiplexer and
+D flip-flops.
+</div>
+
+![Multiplier](./img/Screenshot%202024-06-05%20230828.png)
+
+### Adder
+<div style='text-align: justify;'>
+We use a carry look ahead adder(CLA) in the MAC unit
+as shown in Fig. 7. Table I has the truth table for the carry
+lookahead adder. Using 3 8 bit CLA Adders we create a 24
+bit adder as show in Fig.
+</div>
+
+![Adder Equations](./img/Screenshot%202024-06-05%20231225.png)
+
+## Design Alternatives
+An alternative to the MAC unit is discussed in this section.
