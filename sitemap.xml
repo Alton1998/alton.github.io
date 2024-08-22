@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/2024/08/22/gaussian-distribution-problems-in-interviews/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Alton1998.github.io/alton.github.io/blog/2024/05/21/langchain/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
@@ -52,6 +57,16 @@
     </url>
     <url>
          <loc>https://Alton1998.github.io/alton.github.io/blog/category/statistics/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/category/distribution-modelling/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/category/interview-questions/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
