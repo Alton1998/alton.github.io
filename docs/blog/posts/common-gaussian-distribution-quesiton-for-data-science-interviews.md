@@ -21,4 +21,10 @@ On any given day the average customer visiting a store is 500 and the standard d
 
 ## Solution
 
-So lets note own the details of the 
+So lets note own the details of the problem
+
+We know that the mean $\mu$ is 500 and $\sigma$ is 20. Assuming gaussian distribution. Our model will look something like this:
+
+![Gaussian Distribution](./pics/normal-distribution-curve-diagram-on-old-paper-bac-vector-14225628.jpg)
+
+So the total percentage is 68.26%
