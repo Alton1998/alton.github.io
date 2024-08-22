@@ -11,11 +11,11 @@ categories:
 # Transforming Data to New Mean and Variance
 
 ## Overview
-Sometimes, we would want to transform a data to new mean or variance for difference purposes. For instance, for a normal distribution we might want to skew the mean and variance to correct an error during data collection. These operations are very common in data wrangling
+Sometimes, we would want to transform a data to new mean or variance for different purposes. For instance, for a normal distribution we might want to skew the mean and variance to correct an error during data collection. These operations are very common in data wrangling
 
 ## How do you do it?
 
-Its quite simple really. Let us understand the math behind it.
+It's quite simple really. Let us understand the math behind it.
 
 ### Step 1: Standardize your dataset
 
