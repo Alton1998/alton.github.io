@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/2024/08/22/plotting-several-graphs-with-a-single-line-of-code-using-matplotlib/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://Alton1998.github.io/alton.github.io/blog/2024/08/22/transforming-data-to-new-mean-and-variance/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
@@ -77,6 +82,11 @@
     </url>
     <url>
          <loc>https://Alton1998.github.io/alton.github.io/blog/category/git/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Alton1998.github.io/alton.github.io/blog/category/matplotlib/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
