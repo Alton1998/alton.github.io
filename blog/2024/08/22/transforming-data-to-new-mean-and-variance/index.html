@@ -600,42 +600,57 @@
 <p>Its quite simple really. Let us understand the math behind it.</p>
 <h3 id="step-1-standardize-your-dataset">Step 1: Standardize your dataset</h3>
 <p>To standardise your dataset you need to perform the following transformation first:</p>
-<p>$$
+<p>
+<script type="math/tex; mode=display">
 z = \frac{x - \mu}{\sigma}
-$$</p>
-<p>Where x is the input $\mu$ is the meand and $\sigma$ is the standard deviation and $\sigma^2$ is the variance. This implementation is similar to the sklearn implementation for <code>StandardScaler</code> in python.</p>
+</script>
+</p>
+<p>Where x is the input <script type="math/tex">\mu</script> is the meand and <script type="math/tex">\sigma</script> is the standard deviation and <script type="math/tex">\sigma^2</script> is the variance. This implementation is similar to the sklearn implementation for <code>StandardScaler</code> in python.</p>
 <h3 id="step-2-calculating-new-inputs">Step 2: Calculating new inputs</h3>
 <p>To calculate the new inputs we simply need to use the following formula:</p>
-<p>$$
+<p>
+<script type="math/tex; mode=display">
 x' = z*\sigma' + \mu'
-$$</p>
-<p>Where x' is the new input values and $\sigma'$ is the new standard deviation and $\mu'$ is the new mean</p>
+</script>
+</p>
+<p>Where x' is the new input values and <script type="math/tex">\sigma'</script> is the new standard deviation and <script type="math/tex">\mu'</script> is the new mean</p>
 <h2 id="python-code">Python Code</h2>
-<pre><code class="language-python">import numpy as np
-</code></pre>
-<pre><code class="language-python"># mean = 25
-# std = 10
-input_vals =  np.random.normal(loc=25,scale=10, size=1000)
-</code></pre>
-<pre><code class="language-python">mean = input_vals.mean()
-</code></pre>
-<pre><code class="language-python">std = input_vals.std()
-</code></pre>
-<pre><code class="language-python">transformed_vals = input_vals-mean
-</code></pre>
-<pre><code class="language-python">transformed_vals = transformed_vals/std
-</code></pre>
-<pre><code class="language-python">new_mean = 50
-</code></pre>
-<pre><code class="language-python">new_std = 20
-</code></pre>
-<pre><code class="language-python">new_input_vals = transformed_vals * new_std
-</code></pre>
-<pre><code class="language-python">new_input_vals = new_input_vals + new_mean
-</code></pre>
-<pre><code class="language-python">new_input_vals
-</code></pre>
-<pre><code>array([ 49.49601559,  81.95221737,  44.10701235,  -4.43684172,
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># mean = 25</span>
+<span class="c1"># std = 10</span>
+<span class="n">input_vals</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">mean</span> <span class="o">=</span> <span class="n">input_vals</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">std</span> <span class="o">=</span> <span class="n">input_vals</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">transformed_vals</span> <span class="o">=</span> <span class="n">input_vals</span><span class="o">-</span><span class="n">mean</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">transformed_vals</span> <span class="o">=</span> <span class="n">transformed_vals</span><span class="o">/</span><span class="n">std</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_mean</span> <span class="o">=</span> <span class="mi">50</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_std</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_input_vals</span> <span class="o">=</span> <span class="n">transformed_vals</span> <span class="o">*</span> <span class="n">new_std</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_input_vals</span> <span class="o">=</span> <span class="n">new_input_vals</span> <span class="o">+</span> <span class="n">new_mean</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_input_vals</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>array([ 49.49601559,  81.95221737,  44.10701235,  -4.43684172,
         43.12316393,  22.37556816,  50.8232128 ,  50.82211642,
         54.34191641,  44.22147494,  47.6687756 ,  77.44097655,
         10.03763848,  47.29017838,  32.11374724,  -1.23982667,
@@ -885,19 +900,25 @@ input_vals =  np.random.normal(loc=25,scale=10, size=1000)
         28.86990277,  44.70024564,  75.33577266,  57.81937316,
         26.07899087,  42.28069837,  45.52787923,  55.90744697,
         -3.9831072 ,  83.63294764,  59.18088379,  67.89096616])
-</code></pre>
-<pre><code class="language-python">new_input_vals.mean()
-</code></pre>
-<pre><code>50.00000000000001
-</code></pre>
-<pre><code class="language-python">new_input_vals.std()
-</code></pre>
-<pre><code>20.0
-</code></pre>
-<pre><code class="language-python">
-</code></pre>
-<pre><code class="language-python">
-</code></pre>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_input_vals</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="mf">50.00000000000001</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">new_input_vals</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="mf">20.0</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
 
 
 
@@ -953,6 +974,8 @@ input_vals =  np.random.normal(loc=25,scale=10, size=1000)
     
     
       <script src="../../../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
       
     
   </body>
