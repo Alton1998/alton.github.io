@@ -89,7 +89,7 @@ Calcualte the standard deviation of the differences, S<sub>d</sub> and use this 
 
 Calculate the T value
 
-t = $\frac{d}{SE(d)}
+t = $\frac{d}{SE(d)}$
 
 then use a table of t value to look up the p-values for the paired t-test.
 
