@@ -470,6 +470,117 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-08-23 00:00:00">August 23, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/statistics/" class="md-meta__link">Statistics</a>, 
+              <a href="category/hypothesis-testing/" class="md-meta__link">Hypothesis Testing</a>, 
+              <a href="category/interview-question/" class="md-meta__link">Interview Question</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="hypothesis-testing"><a class="toclink" href="2024/08/23/hypothesis-testing/">Hypothesis Testing</a></h2>
+<p>It's a statistical method used to determine whether a hypothesis about a population is true or not. It involves collection data, analyzing it, and making a decision based on a the evidence</p>
+<h3 id="steps"><a class="toclink" href="2024/08/23/hypothesis-testing/#steps">Steps</a></h3>
+<h4 id="step-1-state-your-null-and-alternate-hypothesis"><a class="toclink" href="2024/08/23/hypothesis-testing/#step-1-state-your-null-and-alternate-hypothesis">Step 1: State your null and alternate hypothesis</a></h4>
+<p>The null hypothesis is a prediction of no relationship between variables you are interested in. The alternate hypothesis on the other hand is your hypothesis that predicts a relationship between variables.</p>
+<h5 id="examples"><a class="toclink" href="2024/08/23/hypothesis-testing/#examples">Examples</a></h5>
+<ol>
+<li>
+<p>You want to test whether there is relationship between gender and height. Based on your knowledge of human physiology, taller than women. To test this hypothesis you restate it as:</p>
+</li>
+<li>
+<p>H<sub>0</sub> : Men are, on average, not taller than women</p>
+</li>
+<li>H<sub>a</sub>: Men are, on average, taller than women.</li>
+</ol>
+<h5 id="some-guidelines-when-using-mathematical-symbols"><a class="toclink" href="2024/08/23/hypothesis-testing/#some-guidelines-when-using-mathematical-symbols">Some Guidelines when using mathematical symbols</a></h5>
+<table>
+<thead>
+<tr>
+<th>H<sub>0</sub></th>
+<th>H<sub>a</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equal (=)</td>
+<td>Not equal (<script type="math/tex">\neq</script>)</td>
+</tr>
+<tr>
+<td>Greater Than or equal to (<script type="math/tex">\geq</script>)</td>
+<td>Less than (<script type="math/tex">\lt</script>)</td>
+</tr>
+<tr>
+<td>Less than or equal to (<script type="math/tex">\leq</script>)</td>
+<td>Greater than (<script type="math/tex">\gt</script>)</td>
+</tr>
+</tbody>
+</table>
+<h6 id="examples_1"><a class="toclink" href="2024/08/23/hypothesis-testing/#examples_1">Examples</a></h6>
+<p>We want to test whether the mean GPA of students in American colleges is different from 2.0.</p>
+<p>The null and alternative hypothese are </p>
+<p>H<sub>0</sub>: <script type="math/tex">\mu</script> = 2.0</p>
+<p>H<sub>a</sub>: <script type="math/tex">\mu</script>
+<script type="math/tex">\ne</script> 2.0</p>
+<h4 id="steps-2-perform-an-appropriate-statistical-test"><a class="toclink" href="2024/08/23/hypothesis-testing/#steps-2-perform-an-appropriate-statistical-test">Steps 2 : Perform an appropriate statistical test</a></h4>
+<p>For this step we perform something known as the t-test. A t-test is any statistical hypothesis test in which the test statistic follows  a t-distribution under the null hypothesis.</p>
+<p>A t-test is most commonly applied when the test statistic would follow a normal distribution if the value of a scaling term in the test statistic were known.</p>
+<p>The t-test can be used to determine if the means of two sets of data are significantly different from each other.</p>
+<p>An independent Samples t-test compares the means for two groups. </p>
+<p>A paired sample t-test compares means from the same  group at different times </p>
+<p>A one sample t-test test the mean of a single group against a known mean.</p>
+<p>T-score is a ration between 2 groups and the difference within the groups.</p>
+<p>The larger the t score, the more difference there is between groups. </p>
+<p>The smaller the t score, the more similarity there is between groups.</p>
+<p>Every t-score has a p-value to go with it. </p>
+<p>A p-value is th probability that results that your sample data occured by chance.</p>
+<p>P-values are from 0% to 100%</p>
+<p>Low p-values are good. They indicate that your data did not occur by chance.</p>
+<h4 id="step-3-decide-whether-to-reject-or-accept-your-null-hypothesis"><a class="toclink" href="2024/08/23/hypothesis-testing/#step-3-decide-whether-to-reject-or-accept-your-null-hypothesis">Step 3: Decide Whether to reject or accept your null hypothesis.</a></h4>
+<p>To understand this step let us solve a problem:</p>
+<p>Suppose a sample of n students were give a diagnostic test before studying a particular module and then again after completing the module. We want to find out if in general teaching leads to improvements in students knowledge/skills. We can use the results from our sample of students to draw concludsion about the impact of this module in general.</p>
+<p>So since we are calculating the mean of the same sample at different points in time we will be using the Pairesd t-test.</p>
+<p>Null hypothesis - There is no difference after completing the module.
+Alternate Hypothesis - There is a difference after completing the module.</p>
+<p>Calculate the difference between the two observations i.e. di = yi - xi.</p>
+<p>Calculate the mean difference d</p>
+<p>Calcualte the standard deviation of the differences, S<sub>d</sub> and use this to calculate the standard error of the mean difference, SE(d) = <script type="math/tex">\frac{Sd}{\sqrt{n}}</script>
+</p>
+<p>Calculate the T value</p>
+<p>t = $\frac{d}{SE(d)}</p>
+<p>then use a table of t value to look up the p-values for the paired t-test.</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-08-22 00:00:00">August 22, 2024</time></li>
         
           <li class="md-meta__item">
@@ -599,48 +710,6 @@
 <ol>
 <li>Git - git-reset Documentation. (n.d.). https://git-scm.com/docs/git-reset</li>
 </ol>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-08-22 00:00:00">August 22, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/statistics/" class="md-meta__link">Statistics</a>, 
-              <a href="category/hypothesis-testing/" class="md-meta__link">Hypothesis Testing</a>, 
-              <a href="category/interview-question/" class="md-meta__link">Interview Question</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="hypothesis-testing"><a class="toclink" href="2024/08/22/hypothesis-testing/">Hypothesis Testing</a></h2>
-<p>It's a statistical method used to determine whether a hypothesis about a population is true or not. It involves collection data, analyzing it, and making a decision based on a the evidence:</p>
     
   </div>
 </article>
