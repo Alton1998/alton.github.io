@@ -38,5 +38,7 @@ The transformer enocder block is composed of alternating layers of multiheaded s
 
 It is to be noted that Vision Transformers have much less inductive bias than CNNs. Inductive biases are assumptions we make about a data set. For example we can assume the marks of students in a given subject to follow a gaussian distribution. CNN architectures inherently will have some biases due to the way they are structured. CNNs are structured to capture the local relationship between the pixels of an image. As CNNS get deeper the local feature extractors help tp extract the global features. In Vit only the MLP layers are local and translationally equivariant while the self attention layers are global. An hybrid version of ViT also exists where CNN is applied to extract the feature maps and then forward to the Transformer encoder block.
 
- 
+## Is it better than CNNs?
 
+
+In the paper ViT can only perform classification tasks and not Segmentation or detection tasks but it still matches or outperforms CNNs and introduces a parallelism with multihead self attention. ViT will only perform better with pre-training and requires more epochs.
