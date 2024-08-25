@@ -472,6 +472,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#is-it-better-than-cnns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is it better than CNNs?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -553,7 +562,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -589,6 +598,8 @@
 <p>This output is forwarded through the some layers of the transformer blocks.</p>
 <p>The transformer enocder block is composed of alternating layers of multiheaded self attention and MLP blocks. Layer Norm is applied before every block i.e. before an attention or MLP block and a residual connection is created after every block.</p>
 <p>It is to be noted that Vision Transformers have much less inductive bias than CNNs. Inductive biases are assumptions we make about a data set. For example we can assume the marks of students in a given subject to follow a gaussian distribution. CNN architectures inherently will have some biases due to the way they are structured. CNNs are structured to capture the local relationship between the pixels of an image. As CNNS get deeper the local feature extractors help tp extract the global features. In Vit only the MLP layers are local and translationally equivariant while the self attention layers are global. An hybrid version of ViT also exists where CNN is applied to extract the feature maps and then forward to the Transformer encoder block.</p>
+<h2 id="is-it-better-than-cnns">Is it better than CNNs?</h2>
+<p>In the paper ViT can only perform classification tasks and not Segmentation or detection tasks but it still matches or outperforms CNNs and introduces a parallelism with multihead self attention. ViT will only perform better with pre-training and requires more epochs.</p>
 
 
 
