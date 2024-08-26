@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://Alton1998.github.io/alton.github.io/blog/category/llms/">
+        <link rel="canonical" href="https://Alton1998.github.io/alton.github.io/blog/category/pytorch/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>LLMs - Alton Lavin D'souza</title>
+        <title>Pytorch - Alton Lavin D'souza</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#llms" class="md-skip">
+        <a href="#pytorch" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LLMs
+              Pytorch
             
           </span>
         </div>
@@ -439,7 +439,7 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="llms">LLMs</h1>
+        <h1 id="pytorch">Pytorch</h1>
       </header>
       
         <article class="md-post md-post--excerpt">
@@ -461,9 +461,9 @@
           <li class="md-meta__item">
             in
             
-              <a href="./" class="md-meta__link">LLMs</a>, 
+              <a href="../llms/" class="md-meta__link">LLMs</a>, 
               <a href="../tensorflow/" class="md-meta__link">Tensorflow</a>, 
-              <a href="../pytorch/" class="md-meta__link">Pytorch</a>, 
+              <a href="./" class="md-meta__link">Pytorch</a>, 
               <a href="../computational-graphs/" class="md-meta__link">Computational Graphs</a>, 
               <a href="../dag/" class="md-meta__link">DAG</a></li>
         
@@ -491,151 +491,6 @@
 <p>The lower nodes are evaluated first then the higher nodes are evaluated.</p>
 <p>Let us consider how this works when performing chain differentiation when it comes to neural networks. </p>
 <p>To review chain differentiation consider the follow ing </p>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-31 00:00:00">May 31, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">LLMs</a>, 
-              <a href="../nlp/" class="md-meta__link">NLP</a>, 
-              <a href="../vectordb/" class="md-meta__link">VectorDB</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="why-go-for-rag"><a class="toclink" href="../../2024/05/31/why-go-for-rag/">Why go for RAG?</a></h2>
-<h3 id="overview"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#overview">Overview</a></h3>
-<p>In this project we choose a foundational model i.e. GPT or BERT and create an API that makes it easy to interact with the LLM.</p>
-<h3 id="foundational-model"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#foundational-model">Foundational model</a></h3>
-<p>We want a foundational model that can interact in the medical context. Some of the models considered here are :</p>
-<ul>
-<li><a href="https://huggingface.co/ruslanmv/Medical-Llama3-8B">Medical Llama-8b</a> - Optimized to address health related inquiries and trained on comprehensive medical chatbot dataset (Apache License 2.0) foundational model used here Meta-Llama-3-8b</li>
-<li><a href="https://huggingface.co/aaditya/Llama3-OpenBioLLM-8B">Llama3-OpenBioLLM-8B</a> - fine tuned on corpus of high quality of biomedical data, 8 billion parameters. Incorporated the DPO data set</li>
-</ul>
-<h3 id="approaches"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#approaches">Approaches</a></h3>
-<p>To create a chat bot we have 2 approaches:</p>
-<ul>
-<li>Fine tuning existing foundational models on medical data set</li>
-<li>Create a Retrieval augmented generation framework which is used for retrieving facts from an external knowledge</li>
-</ul>
-<p><img alt="Comparisons" src="../../pics/Screenshot%202024-05-31%20122720.png" /></p>
-<h4 id="fine-tuning-existing-foundation-models-on-medical-data-set"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#fine-tuning-existing-foundation-models-on-medical-data-set">Fine tuning existing foundation models on medical data set</a></h4>
-<ul>
-<li>Incorporates the additional knowledge into the model itself</li>
-<li>Offers a precise, succinct output that is attuned to brevity.</li>
-<li>High initial cost</li>
-<li>Minimum input size </li>
-</ul>
-<h4 id="retrieval-augmented-generation"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#retrieval-augmented-generation">Retrieval Augmented Generation</a></h4>
-<ul>
-<li>Augments the prompt with external data</li>
-<li>Provides an additional context during question answering.</li>
-<li>Possible collision among similar snippets during the retrieval process</li>
-<li>RAG has larger input size due to inclusion of context information ,output information tends to be more verbose and harder to steer.</li>
-</ul>
-<h4 id="experiment-conclusion"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#experiment-conclusion">Experiment Conclusion</a></h4>
-<p>GPT learned 47% of new knowledge with fine-tuning with RAG this number goes upto 72% and 74%.</p>
-<h3 id="preferred-approach"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#preferred-approach">Preferred approach</a></h3>
-<h4 id="what-we-want"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#what-we-want">What we want?</a></h4>
-<ul>
-<li>Fast Deployment option</li>
-</ul>
-<h4 id="choice-of-approach"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#choice-of-approach">Choice of Approach</a></h4>
-<p>RAG allows to create embeddings easily and allows for a fast deployment option.</p>
-<h3 id="architecture"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#architecture">Architecture</a></h3>
-<p><img alt="Architecture" src="../../pics/AI_copilot_service.drawio.png" /></p>
-<h3 id="references"><a class="toclink" href="../../2024/05/31/why-go-for-rag/#references">References</a></h3>
-<ul>
-<li>https://arxiv.org/pdf/2401.08406</li>
-</ul>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-21 00:00:00">May 21, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">LLMs</a>, 
-              <a href="../nlp/" class="md-meta__link">NLP</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="langchain"><a class="toclink" href="../../2024/05/21/langchain/">LangChain</a></h2>
-<h3 id="overview"><a class="toclink" href="../../2024/05/21/langchain/#overview">Overview</a></h3>
-<p>Consists of 3 components:</p>
-<ul>
-<li>Components:</li>
-<li>LLM Wrappers</li>
-<li>Prompt Templates</li>
-<li>Indexes for information Retrieval</li>
-<li>Chains: Assemble Components to solve a specific task</li>
-<li>Agents: allows LLMs To interact with it's environment</li>
-</ul>
-<h3 id="installation"><a class="toclink" href="../../2024/05/21/langchain/#installation">Installation</a></h3>
-<ul>
-<li>Use Pycharm as your preferred IDE since it makes things easier and user friendly</li>
-<li>Create a new project in Pycharm which looks as follows:</li>
-</ul>
-<p><img alt="Create Project Window" src="../../pics/Screenshot%202024-05-21%20141210.png" /></p>
-<h3 id="references"><a class="toclink" href="../../2024/05/21/langchain/#references">References</a></h3>
-<ol>
-<li><a href="https://www.youtube.com/watch?v=lG7Uxts9SXs&amp;t=2018s">Youtube</a></li>
-</ol>
     
   </div>
 </article>
