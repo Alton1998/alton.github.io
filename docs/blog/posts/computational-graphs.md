@@ -28,8 +28,26 @@ Let us consider how this works when performing chain differentiation when it com
 
 To review chain differentiation consider the following equation:
 
-1. Y = (a-b) * (a+b)
+1. y = $u^4$
+2. u = 3x + 2 
 
-Performing chain rule differentiation we would get the follolwing:
+Performing chain rule differentiation with respect to x we would get the follolwing:
 
-$$\frac{\partial Y}{\partial a} = \frac{\partial ((a-b)*(a+b))}{\partial a}$$
+$$\frac{\partial y(u)}{\partial x } = \frac{\partial (u^4)}{\partial x}$$
+
+$$\frac{\partial u}{\partial x} = \frac{\partial (3x+2)}{\partial x} $$
+
+$$\frac{\partial u}{\partial x} = 3 + 0 $$
+
+$$\frac{\partial u}{\partial x} = 3 $$
+
+$$\frac{\partial( \partial y(u))}{\partial x \partial u} = \frac{\partial (\partial (u^4))}{\partial x \partial u}$$
+
+$$\frac{\partial y(u)} {\partial x } =  \frac{\partial (4u^3)}{\partial x} $$
+
+$$\frac{\partial y(u)} {\partial x } = \frac{4*3 u^2 \partial u}{\partial x}$$
+
+$$\frac{\partial y(u)} {\partial x } = 12*(3x+2)^2 * 3 $$
+
+
+
