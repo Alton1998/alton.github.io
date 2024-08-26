@@ -26,4 +26,10 @@ The lower nodes are evaluated first then the higher nodes are evaluated.
 
 Let us consider how this works when performing chain differentiation when it comes to neural networks. 
 
-To review chain differentiation consider the follow ing 
+To review chain differentiation consider the following equation:
+
+1. Y = (a-b) * (a+b)
+
+Performing chain rule differentiation we would get the follolwing:
+
+$$\frac{\partial Y}{\partial a} = \frac{\partial ((a-b)*(a+b))}{\partial a}$$
