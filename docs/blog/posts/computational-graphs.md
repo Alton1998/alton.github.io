@@ -8,6 +8,7 @@ categories:
   - Tensorflow
   - Pytorch
   - Computational Graphs
+  - Partial Differentiation
   - DAG
 ---
 
@@ -49,5 +50,6 @@ $$\frac{\partial y(u)} {\partial x } = \frac{4*3 u^2 \partial u}{\partial x}$$
 
 $$\frac{\partial y(u)} {\partial x } = 12*(3x+2)^2 * 3 $$
 
+Representing the above steps in a computational graph we get the following: 
 
-
+![Chained Computational Graph](./pics/Chained%20Equation.png)
