@@ -34,21 +34,30 @@ To review chain differentiation consider the following equation:
 
 Performing chain rule differentiation with respect to x we would get the follolwing:
 
-$$\frac{\partial y(u)}{\partial x } = \frac{\partial (u^4)}{\partial x}$$
-
-$$\frac{\partial u}{\partial x} = \frac{\partial (3x+2)}{\partial x} $$
-
-$$\frac{\partial u}{\partial x} = 3 + 0 $$
+We first perform partial differentiation of `u` with respect to `x`
 
 $$\frac{\partial u}{\partial x} = 3 $$
 
-$$\frac{\partial( \partial y(u))}{\partial x \partial u} = \frac{\partial (\partial (u^4))}{\partial x \partial u}$$
+Then perform partial differentiation of `y` with respect to `u`
 
-$$\frac{\partial y(u)} {\partial x } =  \frac{\partial (4u^3)}{\partial x} $$
+$$\frac{\partial y}{\partial u} = 4u^3$$
 
-$$\frac{\partial y(u)} {\partial x } = \frac{4*3 u^2 \partial u}{\partial x}$$
+Can be re-written as:
 
-$$\frac{\partial y(u)} {\partial x } = 12*(3x+2)^2 * 3 $$
+$$ \frac{\partial y}{3\partial x} = 4u^3$$
+
+$$ \frac{\partial y}{\partial x} = 12 u^3$$
+
+if x = 3.0 
+
+ u = 11
+
+ $\frac{\partial y}{\partial x} = 15972$ 
+
+
+
+
+
 
 Representing the above steps in a computational graph we get the following: 
 
