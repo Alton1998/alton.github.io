@@ -16,11 +16,7 @@ categories:
 
 ## Overview 
 
-Stable Diffusion has become so popular for image generation. It is the go to model for developers. It is a latent diffusion model that generates AI images for text. Sometimes you can also use an image and text to generate images. Some important things that I would like to highlight in this blog:
-
-1. Text-to-Image
-2. Image-to-Image
-3. CFG scale (Classifier Free Guidance Scale)
+Stable Diffusion has become so popular for image generation. It is the go to model for developers. It is a latent diffusion model that generates AI images for text. Sometimes you can also use an image and text to generate images.
 
 ## Capabilities of Stable Diffussion
 
@@ -129,11 +125,24 @@ So far we have seen only image generation process which is called the unconditio
 
 ### Text Conditioning
 
-To be able to generate images using the text prompts we need to perform the preprocessing steps in figure 10. In the figure the Tokenizer and Embedder are implemented by a Contrastive Language-Image Pretraining model (CLIP). It should be noted here since we are dealling with a text input the convulutional layers are replaced by cross attention layers to help establish relationship between different words
+To be able to generate images using the text prompts we need to perform the preprocessing steps in figure 10. In the figure the Tokenizer and Embedder are implemented by a Contrastive Language-Image Pretraining model (CLIP). It should be noted here since we are dealling with a text input the convulutional layers are replaced by cross attention layers to help establish relationship between different words in a sentence. Attention layers are the new feature extracture layers, they are going to replace RNNs and CNNs as they are faster at processing and get rid of any inductive biases due the structure of neural network.
+
+There are other forms of conditioning as well
 
 | ![VAE overview](./pics/Stable_diffusion_text_conditioning.png) | 
 |:--:| 
 | *Figure 10: Text Conditioning steps* |
+
+## Summary
+
+To summarize how stable diffusion creates images here are the steps:
+
+1. Given a text or image we generate a random vectors in the latent space this is done through VAE encoder.
+2. U-NET then predicts the noise that is added to this vector.
+3. Given the amount of noise that is added we remove the noise for the latent vector.
+4. Steps 2 and 3 are repeated for a certain number of sampling steps
+5. Finally, the decoder of VAE converts the latent image back to pixel space. This is the image you get after running Stable Diffusion.
+
 
 ## References
 
