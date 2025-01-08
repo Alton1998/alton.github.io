@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Corona Virus Detection in Chest X-Rays
 ## Overview
 <div style='text-align: justify;'>

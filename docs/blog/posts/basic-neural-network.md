@@ -1,5 +1,6 @@
 ---
 draft: true
+comments: true
 date: 2024-08-27
 authors:
   - alton

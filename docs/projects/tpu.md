@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # Tensor Processing Unit
 ## Overview
 <div style='text-align: justify;'>

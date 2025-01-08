@@ -1,6 +1,7 @@
 ---
 draft: false
 date: 2025-01-07
+comments: true
 authors:
   - alton
 categories:
@@ -126,6 +127,13 @@ The noised predictor here is still U-Net.
 
 So far we have seen only image generation process which is called the unconditioned process. In the following sections we will see how we can condition for text i.e. given a text the model should generate an image.
 
+### Text Conditioning
+
+To be able to generate images using the text prompts we need to perform the preprocessing steps in figure 10. In the figure the Tokenizer and Embedder are implemented by a Contrastive Language-Image Pretraining model (CLIP). It should be noted here since we are dealling with a text input the convulutional layers are replaced by cross attention layers to help establish relationship between different words
+
+| ![VAE overview](./pics/Stable_diffusion_text_conditioning.png) | 
+|:--:| 
+| *Figure 10: Text Conditioning steps* |
 
 ## References
 
