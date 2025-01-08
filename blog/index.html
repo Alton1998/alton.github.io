@@ -652,6 +652,20 @@
 </ol>
 <p>The noised predictor here is still U-Net.</p>
 <p>So far we have seen only image generation process which is called the unconditioned process. In the following sections we will see how we can condition for text i.e. given a text the model should generate an image.</p>
+<h4 id="text-conditioning"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#text-conditioning">Text Conditioning</a></h4>
+<p>To be able to generate images using the text prompts we need to perform the preprocessing steps in figure 10. In the figure the Tokenizer and Embedder are implemented by a Contrastive Language-Image Pretraining model (CLIP). It should be noted here since we are dealling with a text input the convulutional layers are replaced by cross attention layers to help establish relationship between different words</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="VAE overview" src="pics/Stable_diffusion_text_conditioning.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 10: Text Conditioning steps</em></td>
+</tr>
+</tbody>
+</table>
 <h3 id="references"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#references">References</a></h3>
 <ol>
 <li>Andrew, “How does Stable Diffusion work?,” Stable Diffusion Art, Jun. 10, 2024. https://stable-diffusion-art.com/how-stable-diffusion-work/</li>
