@@ -470,6 +470,213 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2025-01-07 00:00:00+00:00">January 7, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/artificial-neural-networks/" class="md-meta__link">Artificial Neural Networks</a>, 
+              <a href="category/artificial-intelligence/" class="md-meta__link">Artificial Intelligence</a>, 
+              <a href="category/computer-vision/" class="md-meta__link">Computer Vision</a>, 
+              <a href="category/image-generation/" class="md-meta__link">Image Generation</a>, 
+              <a href="category/stable-diffusion/" class="md-meta__link">Stable Diffusion</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="stable-diffusion-understanding"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/">Stable Diffusion Understanding</a></h2>
+<h3 id="overview"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#overview">Overview</a></h3>
+<p>Stable Diffusion has become so popular for image generation. It is the go to model for developers. It is a latent diffusion model that generates AI images for text. Sometimes you can also use an image and text to generate images. Some important things that I would like to highlight in this blog:</p>
+<ol>
+<li>Text-to-Image</li>
+<li>Image-to-Image</li>
+<li>CFG scale (Classifier Free Guidance Scale)</li>
+</ol>
+<h3 id="capabilities-of-stable-diffussion"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#capabilities-of-stable-diffussion">Capabilities of Stable Diffussion</a></h3>
+<p>Stable diffusion is a text-to-image model. Given a text it will produce an image.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Stable Diffusion Text to Image" src="pics/stable_diffusion.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 1:Basic Workflow of Stable Diffusion</em></td>
+</tr>
+</tbody>
+</table>
+<p>Stable diffusion belongs to a class of deep learning models called diffusion models. These are models that are capable of generating new data that is similar to the training data. These models are so named since they use diffusion based mechanics we see in physics. We see two types of diffusion here:
+1. Forward Diffusion
+2. Reverse Diffusion</p>
+<h4 id="forward-diffusion"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#forward-diffusion">Forward Diffusion</a></h4>
+<p>Forward diffusion is the process that adds noise to an image in steps such that it gradually becomes unrecognizable. It is similar to the process where you drop ink on tissue paper the ink eventually spreads out.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Forward Diffusion Process" src="pics/image.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 2: Stable diffusion Forward diffusion process taken from <a href="https://stable-diffusion-art.com/how-stable-diffusion-work/">here</a></em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Forward Diffusion Process" src="pics/Analogy_pen_ink.jpg" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 3: Drop of ink from the nib of the pen  spreading on the tissue paper (AI Generated from LLama 3.2)</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="reverse-diffusion"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#reverse-diffusion">Reverse Diffusion</a></h4>
+<p>Reverse diffusion is the opposite of Forward Diffusion. So rather than adding noise, it removes noise gradually from an image.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Reverse Diffusion Process" src="pics/reverse_diffusion_process.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 4: Stable diffusion Reverse diffusion process taken from <a href="https://stable-diffusion-art.com/how-stable-diffusion-work/">here</a></em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="training-process-of-stable-diffusion"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#training-process-of-stable-diffusion">Training process of Stable Diffusion</a></h3>
+<p>Adding noise is simple process and does not require explicit training. But how do get the old image back from a noisy image. We need to remove the noise from the image. To put it mathematically.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Reverse Diffusion Process Equation" src="pics/Equation%20for%20Reverse%20Diffusion.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 5: Stable diffusion Reverse diffusion High Level Equation</em></td>
+</tr>
+</tbody>
+</table>
+<p>So what we need to do is predict the amount of noise that needs to be removed to produce the original almost noiseless image. We use a noise predictor which for stable diffusion is a U-net model.</p>
+<h4 id="u-net-model"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#u-net-model">U-Net Model</a></h4>
+<p>It is a widely used deep learning model for image segmentation. The primary purpose of the model was t o address the challenge of limited data in healthcare. This network allows you to use a smalled dataset for training while maintaining the speed and accuracy of the model.</p>
+<p>The U-Net model consists of 2 paths:</p>
+<ol>
+<li>Contracting Path </li>
+<li>Expansive Path</li>
+</ol>
+<p>The contracting path consist of encoders, that capture the relevant information and encode it. The expansive path contains decoders the decode the encoded information and also use the information from the contracting path via the skip connections to generate a segmentation map.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="U-net Model" src="pics/U-net.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 6: U-net model taken from <a href="https://www.geeksforgeeks.org/u-net-architecture-explained/">here</a></em></td>
+</tr>
+</tbody>
+</table>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="U-net Model Encoder" src="pics/U-net%20Encoders.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 7: U-net model Encoder Architecture</em></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="U-net Model Decoder" src="pics/U-net-decoder.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 8: U-net model Decoder Architecture</em></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h4 id="cost-of-running-the-model"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#cost-of-running-the-model">Cost of running the model</a></h4>
+<p>Diffusion models like Google’s Imagen and Open AI’s DALL-E are in pixel space. They have used some tricks to make the model faster but still not enough. Whereas, Stable Diffusion is a latent diffusion model. Instead of operating in the high-dimensional image space, it first compresses the image into the latent space. The latent space is 48 times smaller so it reaps the benefit of crunching a lot fewer numbers. That’s why it’s a lot faster. We use a Variational Autonencoders (VAE).</p>
+<p>To summarise we use U-net in the image space for faster generation we make use of the latent space, for this we use VAE. U-Net is still used as the noise predictor.</p>
+<h4 id="variational-autoencoders"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#variational-autoencoders">Variational Autoencoders</a></h4>
+<p>Like U-net these also have encoders and decodes, the noise is added to latent vector and is later decoded to generate the images.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="VAE overview" src="pics/VAE_working.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 9: VAE Working</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="does-using-latent-space-cause-loss-in-information"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#does-using-latent-space-cause-loss-in-information">Does using latent space cause loss in information?</a></h4>
+<p>It might seem that while using the latent space we are loosing a lot of information, however thats not the case. It might seem that images are random but they are regular in nature. For Example: A face of any species has a mouth, ears and a nose. This is better explained by the Manifold Hypothesis.</p>
+<h4 id="reverse-diffusion-in-latent-space"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#reverse-diffusion-in-latent-space">Reverse Diffusion in Latent Space</a></h4>
+<p>Here’s how latent reverse diffusion in Stable Diffusion works.</p>
+<ol>
+<li>A random latent space matrix is generated.</li>
+<li>The noise predictor estimates the noise of the latent matrix.</li>
+<li>The estimated noise is then subtracted from the latent matrix.</li>
+<li>Steps 2 and 3 are repeated up to specific sampling steps.</li>
+<li>The decoder of VAE converts the latent matrix to the final image.</li>
+</ol>
+<p>The noised predictor here is still U-Net.</p>
+<p>So far we have seen only image generation process which is called the unconditioned process. In the following sections we will see how we can condition for text i.e. given a text the model should generate an image.</p>
+<h3 id="references"><a class="toclink" href="2025/01/07/stable-diffusion-understanding/#references">References</a></h3>
+<ol>
+<li>Andrew, “How does Stable Diffusion work?,” Stable Diffusion Art, Jun. 10, 2024. https://stable-diffusion-art.com/how-stable-diffusion-work/</li>
+<li>GeeksforGeeks, “UNET Architecture explained,” GeeksforGeeks, Jun. 08, 2023. https://www.geeksforgeeks.org/u-net-architecture-explained/</li>
+<li>O. Ronneberger, P. Fischer, and T. Brox, “U-NET: Convolutional Networks for Biomedical Image Segmentation,” arXiv.org, May 18, 2015. https://arxiv.org/abs/1505.04597</li>
+<li>Wikipedia contributors, “Manifold hypothesis,” Wikipedia, Aug. 01, 2024. https://en.wikipedia.org/wiki/Manifold_hypothesis</li>
+</ol>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-08-26 00:00:00+00:00">August 26, 2024</time></li>
         
           <li class="md-meta__item">
