@@ -1,51 +1,43 @@
-site_name: Alton Lavin D'souza
+site_name: Alton Lavin D'Souza
 site_url: https://Alton1998.github.io/alton.github.io/
-python:
-   version: 3 # for unicode
-   setup_py_install: true
 
-#the third-party extenison mdx_math.py comes with a setup.py script
-# Thank you Dmitry Shachnev (https://github.com/mitya57/python-markdown-math) 
+# Markdown Extensions
 markdown_extensions: 
-    - mdx_math:
-        enable_dollar_delimiter: True #for use of inline $..$
-    - fenced_code
-    - codehilite
-    - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - fenced_code
+  - codehilite
+  - footnotes
 
-# Required to load the MathJax javascript for the mdx_math.py
-extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML']
+# MathJax Integration
+extra_javascript: 
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+
+# Plugins
 plugins:
   - blog:
       blog_dir: blog/
-      categories_pagination: true
+      archive: true
+      feed: true
+      categories: true
   - search
   - rss:
-      match_path: blog/posts/.* 
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags 
+      match_path: blog/posts/.*
+
+# Theme Configuration
 theme:
   name: material
   custom_dir: overrides
   features:
     - navigation.indexes
+
+# Navigation
 nav:
   - About: index.md
   - Work Experience:
-    - Oracle: work_experience/oracle.md
+      - Oracle: work_experience/oracle.md
   - Projects:
-    - Arrhythmia Detection: projects/arrhythmia.md
-    - Corona Virus Detection in Chest X-Rays: projects/chest_x_rays.md
-    - Tensor Processing Unit: projects/tpu.md
+      - Arrhythmia Detection: projects/arrhythmia.md
+      - Corona Virus Detection in Chest X-Rays: projects/chest_x_rays.md
+      - Tensor Processing Unit: projects/tpu.md
   - Blog: blog/index.md
-    # - Detect AI Generated Texts:
-    # - Creating A 
-  # - Learnings:
-  #   - Python:
-  #   - Java:
-  #   - Deep Learning:
-  #   - NLP:
-  #   - Image Processing:
