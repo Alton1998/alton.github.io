@@ -456,6 +456,90 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2025-01-09 00:00:00+00:00">January 9, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/artificial-neural-networks/" class="md-meta__link">Artificial Neural Networks</a>, 
+              <a href="../../category/artificial-intelligence/" class="md-meta__link">Artificial Intelligence</a>, 
+              <a href="../../category/llms/" class="md-meta__link">LLMs</a>, 
+              <a href="../../category/vlms/" class="md-meta__link">VLMs</a>, 
+              <a href="../../category/llava/" class="md-meta__link">LLaVA</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="llava"><a class="toclink" href="../../2025/01/09/llava/">LLaVA</a></h2>
+<h3 id="overview"><a class="toclink" href="../../2025/01/09/llava/#overview">Overview</a></h3>
+<p>LLaVA (Large Language and Vision Assistant) was first introduced in the paper "Visual Instruction Tuning".</p>
+<h3 id="what-is-visual-instruction-tuning"><a class="toclink" href="../../2025/01/09/llava/#what-is-visual-instruction-tuning">What is Visual Instruction Tuning?</a></h3>
+<p>Visual instruction tuning is a method used to fine-tune a large language model, enabling it to interpret and respond to instructions derived from visual inputs.</p>
+<p>One example is to ask a machine learning model to describe an image.</p>
+<h3 id="llava_1"><a class="toclink" href="../../2025/01/09/llava/#llava_1">LLaVA</a></h3>
+<p>As already established LLaVA is a multimodal model. LLaVA was trained on a small dataset. Despite this it can perform image analysis and respond to questions.</p>
+<h4 id="architecture"><a class="toclink" href="../../2025/01/09/llava/#architecture">Architecture</a></h4>
+<p>The LLaVA has the following components:
+1. Language model
+2. Vision Encoder
+3. Projection</p>
+<p>We use the Llama as the language model, which is a family of autoregressive LLMs released by Meta AI.</p>
+<p>The vision encoder is implemented by CLIP visual encoder ViT-L/14. The encoder extracts visual features and connects them to language embeddings through a projection matrix. The projection component translates visual features into language embedding tokens, thereby bridgin the gap between text and images.</p>
+<h4 id="training"><a class="toclink" href="../../2025/01/09/llava/#training">Training</a></h4>
+<p>Two stages of training:</p>
+<ol>
+<li>Pre-training for Feature Alignment: LLaVA aligns visual and language features to ensure compatibility in this initial stage.</li>
+<li>Fine-tune end-to-end: The second training stage focuses on fine-tuning the entire model. At this stage the vision encoder's weights remain fixed</li>
+</ol>
+<h3 id="llava-15"><a class="toclink" href="../../2025/01/09/llava/#llava-15">LLaVA-1.5</a></h3>
+<p>In LLaVA-1.5 there are two significant changes:
+1. MLP vision-language connector
+2. Trained for academic task-oriented data.</p>
+<p>The linear projection layer is replaced with a 2 layer MLP.</p>
+<h3 id="llava-16-llava-next"><a class="toclink" href="../../2025/01/09/llava/#llava-16-llava-next">LLaVA 1.6 (LLaVA-NeXT)</a></h3>
+<p>n addition to LLaVA 1.5, which uses the Vicuna-1.5 (7B and 13B) LLM backbone, LLaVA 1.6 considers more LLMs, including Mistral-7B and Nous-Hermes-2-Yi-34B. These LLMs possess nice properties, flexible commercial use terms, strong bilingual support, and a larger language model capacity. It allows LLaVA to support a broader spectrum of users and more scenarios in the community. The LLaVA recipe works well with various LLMs and scales up smoothly with the LLM up to 34B.</p>
+<p>Here are the performance improvements LLaVA-NeXT has over LLaVA-1.5:</p>
+<p>Increasing the input image resolution to 4x more pixels. This allows it to grasp more visual details. It supports three aspect ratios, up to 672x672, 336x1344, and 1344x336 resolution.
+Better visual reasoning and zero-shot OCR capability with multimodal document and chart data.
+Improved visual instruction tuning data mixture with a higher diversity of task instructions and optimizing for responses that solicit favorable user feedback.
+Better visual conversation for more scenarios covering different applications. Better world knowledge and logical reasoning.
+Efficient deployment and inference with SGLang.</p>
+<p>Other variants of LLaVA:
+1. LLaVA-Med
+2. LLaVA-Interactive</p>
+<h3 id="reference"><a class="toclink" href="../../2025/01/09/llava/#reference">Reference</a></h3>
+<ol>
+<li>A. Acharya, “LLAVA, LLAVA-1.5, and LLAVA-NeXT(1.6) explained,” Nov. 04, 2024. https://encord.com/blog/llava-large-language-vision-assistant/</li>
+<li>Wikipedia contributors, “Llama (language model),” Wikipedia, Jan. 01, 2025. https://en.wikipedia.org/wiki/Llama_(language_model)</li>
+</ol>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2025-01-07 00:00:00+00:00">January 7, 2025</time></li>
         
           <li class="md-meta__item">

@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://Alton1998.github.io/alton.github.io/blog/2025/01/07/stable-diffusion-understanding/">
+        <link rel="canonical" href="https://Alton1998.github.io/alton.github.io/blog/2025/01/09/llava/">
       
       
-        <link rel="prev" href="../../../../2024/08/26/computational-graphs/">
+        <link rel="prev" href="../../07/stable-diffusion-understanding/">
       
-      
-        <link rel="next" href="../../09/llava/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -25,7 +23,7 @@
     
     
       
-        <title>Stable Diffusion Understanding - Alton Lavin D'Souza</title>
+        <title>LLaVA - Alton Lavin D'Souza</title>
       
     
     
@@ -69,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stable-diffusion-understanding" class="md-skip">
+        <a href="#llava" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stable Diffusion Understanding
+              LLaVA
             
           </span>
         </div>
@@ -455,28 +453,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#capabilities-of-stable-diffussion" class="md-nav__link">
+  <a href="#what-is-visual-instruction-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Capabilities of Stable Diffussion
+      What is Visual Instruction Tuning?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Capabilities of Stable Diffussion">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llava_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLaVA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLaVA">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#forward-diffusion" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Forward Diffusion
+      Architecture
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reverse-diffusion" class="md-nav__link">
+  <a href="#training" class="md-nav__link">
     <span class="md-ellipsis">
-      Reverse Diffusion
+      Training
     </span>
   </a>
   
@@ -488,87 +495,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#training-process-of-stable-diffusion" class="md-nav__link">
+  <a href="#llava-15" class="md-nav__link">
     <span class="md-ellipsis">
-      Training process of Stable Diffusion
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Training process of Stable Diffusion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#u-net-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      U-Net Model
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cost-of-running-the-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cost of running the model
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variational-autoencoders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Variational Autoencoders
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#does-using-latent-space-cause-loss-in-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Does using latent space cause loss in information?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reverse-diffusion-in-latent-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reverse Diffusion in Latent Space
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#text-conditioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text Conditioning
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
+      LLaVA-1.5
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#llava-16-llava-next" class="md-nav__link">
     <span class="md-ellipsis">
-      References
+      LLaVA 1.6 (LLaVA-NeXT)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -630,7 +577,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-01-07 00:00:00+00:00" class="md-ellipsis">January 7, 2025</time>
+                        <time datetime="2025-01-09 00:00:00+00:00" class="md-ellipsis">January 9, 2025</time>
                       </div>
                     </li>
                     
@@ -643,9 +590,9 @@
                             
                               <a href="../../../../category/artificial-neural-networks/">Artificial Neural Networks</a>, 
                               <a href="../../../../category/artificial-intelligence/">Artificial Intelligence</a>, 
-                              <a href="../../../../category/computer-vision/">Computer Vision</a>, 
-                              <a href="../../../../category/image-generation/">Image Generation</a>, 
-                              <a href="../../../../category/stable-diffusion/">Stable Diffusion</a></span>
+                              <a href="../../../../category/llms/">LLMs</a>, 
+                              <a href="../../../../category/vlms/">VLMs</a>, 
+                              <a href="../../../../category/llava/">LLaVA</a></span>
                         </div>
                       </li>
                     
@@ -656,7 +603,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -676,189 +623,47 @@
         
 
 
-<h1 id="stable-diffusion-understanding">Stable Diffusion Understanding</h1>
+<h1 id="llava">LLaVA</h1>
 <h2 id="overview">Overview</h2>
-<p>Stable Diffusion has become so popular for image generation. It is the go to model for developers. It is a latent diffusion model that generates AI images for text. Sometimes you can also use an image and text to generate images.</p>
-<h2 id="capabilities-of-stable-diffussion">Capabilities of Stable Diffussion</h2>
-<p>Stable diffusion is a text-to-image model. Given a text it will produce an image.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Stable Diffusion Text to Image" src="../../../../pics/stable_diffusion.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 1:Basic Workflow of Stable Diffusion</em></td>
-</tr>
-</tbody>
-</table>
-<p>Stable diffusion belongs to a class of deep learning models called diffusion models. These are models that are capable of generating new data that is similar to the training data. These models are so named since they use diffusion based mechanics we see in physics. We see two types of diffusion here:
-1. Forward Diffusion
-2. Reverse Diffusion</p>
-<h3 id="forward-diffusion">Forward Diffusion</h3>
-<p>Forward diffusion is the process that adds noise to an image in steps such that it gradually becomes unrecognizable. It is similar to the process where you drop ink on tissue paper the ink eventually spreads out.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Forward Diffusion Process" src="../../../../pics/image.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 2: Stable diffusion Forward diffusion process taken from <a href="https://stable-diffusion-art.com/how-stable-diffusion-work/">here</a></em></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Forward Diffusion Process" src="../../../../pics/Analogy_pen_ink.jpg" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 3: Drop of ink from the nib of the pen  spreading on the tissue paper (AI Generated from LLama 3.2)</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="reverse-diffusion">Reverse Diffusion</h3>
-<p>Reverse diffusion is the opposite of Forward Diffusion. So rather than adding noise, it removes noise gradually from an image.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Reverse Diffusion Process" src="../../../../pics/reverse_diffusion_process.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 4: Stable diffusion Reverse diffusion process taken from <a href="https://stable-diffusion-art.com/how-stable-diffusion-work/">here</a></em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="training-process-of-stable-diffusion">Training process of Stable Diffusion</h2>
-<p>Adding noise is simple process and does not require explicit training. But how do get the old image back from a noisy image. We need to remove the noise from the image. To put it mathematically.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Reverse Diffusion Process Equation" src="../../../../pics/Equation%20for%20Reverse%20Diffusion.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 5: Stable diffusion Reverse diffusion High Level Equation</em></td>
-</tr>
-</tbody>
-</table>
-<p>So what we need to do is predict the amount of noise that needs to be removed to produce the original almost noiseless image. We use a noise predictor which for stable diffusion is a U-net model.</p>
-<h3 id="u-net-model">U-Net Model</h3>
-<p>It is a widely used deep learning model for image segmentation. The primary purpose of the model was t o address the challenge of limited data in healthcare. This network allows you to use a smalled dataset for training while maintaining the speed and accuracy of the model.</p>
-<p>The U-Net model consists of 2 paths:</p>
+<p>LLaVA (Large Language and Vision Assistant) was first introduced in the paper "Visual Instruction Tuning".</p>
+<h2 id="what-is-visual-instruction-tuning">What is Visual Instruction Tuning?</h2>
+<p>Visual instruction tuning is a method used to fine-tune a large language model, enabling it to interpret and respond to instructions derived from visual inputs.</p>
+<p>One example is to ask a machine learning model to describe an image.</p>
+<h2 id="llava_1">LLaVA</h2>
+<p>As already established LLaVA is a multimodal model. LLaVA was trained on a small dataset. Despite this it can perform image analysis and respond to questions.</p>
+<h3 id="architecture">Architecture</h3>
+<p>The LLaVA has the following components:
+1. Language model
+2. Vision Encoder
+3. Projection</p>
+<p>We use the Llama as the language model, which is a family of autoregressive LLMs released by Meta AI.</p>
+<p>The vision encoder is implemented by CLIP visual encoder ViT-L/14. The encoder extracts visual features and connects them to language embeddings through a projection matrix. The projection component translates visual features into language embedding tokens, thereby bridgin the gap between text and images.</p>
+<h3 id="training">Training</h3>
+<p>Two stages of training:</p>
 <ol>
-<li>Contracting Path </li>
-<li>Expansive Path</li>
+<li>Pre-training for Feature Alignment: LLaVA aligns visual and language features to ensure compatibility in this initial stage.</li>
+<li>Fine-tune end-to-end: The second training stage focuses on fine-tuning the entire model. At this stage the vision encoder's weights remain fixed</li>
 </ol>
-<p>The contracting path consist of encoders, that capture the relevant information and encode it. The expansive path contains decoders the decode the encoded information and also use the information from the contracting path via the skip connections to generate a segmentation map.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="U-net Model" src="../../../../pics/U-net.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 6: U-net model taken from <a href="https://www.geeksforgeeks.org/u-net-architecture-explained/">here</a></em></td>
-</tr>
-</tbody>
-</table>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="U-net Model Encoder" src="../../../../pics/U-net%20Encoders.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 7: U-net model Encoder Architecture</em></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="U-net Model Decoder" src="../../../../pics/U-net-decoder.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 8: U-net model Decoder Architecture</em></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<h3 id="cost-of-running-the-model">Cost of running the model</h3>
-<p>Diffusion models like Google’s Imagen and Open AI’s DALL-E are in pixel space. They have used some tricks to make the model faster but still not enough. Whereas, Stable Diffusion is a latent diffusion model. Instead of operating in the high-dimensional image space, it first compresses the image into the latent space. The latent space is 48 times smaller so it reaps the benefit of crunching a lot fewer numbers. That’s why it’s a lot faster. We use a Variational Autonencoders (VAE).</p>
-<p>To summarise we use U-net in the image space for faster generation we make use of the latent space, for this we use VAE. U-Net is still used as the noise predictor.</p>
-<h3 id="variational-autoencoders">Variational Autoencoders</h3>
-<p>Like U-net these also have encoders and decodes, the noise is added to latent vector and is later decoded to generate the images.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="VAE overview" src="../../../../pics/VAE_working.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 9: VAE Working</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="does-using-latent-space-cause-loss-in-information">Does using latent space cause loss in information?</h3>
-<p>It might seem that while using the latent space we are loosing a lot of information, however thats not the case. It might seem that images are random but they are regular in nature. For Example: A face of any species has a mouth, ears and a nose. This is better explained by the Manifold Hypothesis.</p>
-<h3 id="reverse-diffusion-in-latent-space">Reverse Diffusion in Latent Space</h3>
-<p>Here’s how latent reverse diffusion in Stable Diffusion works.</p>
+<h2 id="llava-15">LLaVA-1.5</h2>
+<p>In LLaVA-1.5 there are two significant changes:
+1. MLP vision-language connector
+2. Trained for academic task-oriented data.</p>
+<p>The linear projection layer is replaced with a 2 layer MLP.</p>
+<h2 id="llava-16-llava-next">LLaVA 1.6 (LLaVA-NeXT)</h2>
+<p>n addition to LLaVA 1.5, which uses the Vicuna-1.5 (7B and 13B) LLM backbone, LLaVA 1.6 considers more LLMs, including Mistral-7B and Nous-Hermes-2-Yi-34B. These LLMs possess nice properties, flexible commercial use terms, strong bilingual support, and a larger language model capacity. It allows LLaVA to support a broader spectrum of users and more scenarios in the community. The LLaVA recipe works well with various LLMs and scales up smoothly with the LLM up to 34B.</p>
+<p>Here are the performance improvements LLaVA-NeXT has over LLaVA-1.5:</p>
+<p>Increasing the input image resolution to 4x more pixels. This allows it to grasp more visual details. It supports three aspect ratios, up to 672x672, 336x1344, and 1344x336 resolution.
+Better visual reasoning and zero-shot OCR capability with multimodal document and chart data.
+Improved visual instruction tuning data mixture with a higher diversity of task instructions and optimizing for responses that solicit favorable user feedback.
+Better visual conversation for more scenarios covering different applications. Better world knowledge and logical reasoning.
+Efficient deployment and inference with SGLang.</p>
+<p>Other variants of LLaVA:
+1. LLaVA-Med
+2. LLaVA-Interactive</p>
+<h2 id="reference">Reference</h2>
 <ol>
-<li>A random latent space matrix is generated.</li>
-<li>The noise predictor estimates the noise of the latent matrix.</li>
-<li>The estimated noise is then subtracted from the latent matrix.</li>
-<li>Steps 2 and 3 are repeated up to specific sampling steps.</li>
-<li>The decoder of VAE converts the latent matrix to the final image.</li>
-</ol>
-<p>The noised predictor here is still U-Net.</p>
-<p>So far we have seen only image generation process which is called the unconditioned process. In the following sections we will see how we can condition for text i.e. given a text the model should generate an image.</p>
-<h3 id="text-conditioning">Text Conditioning</h3>
-<p>To be able to generate images using the text prompts we need to perform the preprocessing steps in figure 10. In the figure the Tokenizer and Embedder are implemented by a Contrastive Language-Image Pretraining model (CLIP). It should be noted here since we are dealling with a text input the convulutional layers are replaced by cross attention layers to help establish relationship between different words in a sentence. Attention layers are the new feature extracture layers, they are going to replace RNNs and CNNs as they are faster at processing and get rid of any inductive biases due the structure of neural network.</p>
-<p>There are other forms of conditioning as well</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="VAE overview" src="../../../../pics/Stable_diffusion_text_conditioning.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 10: Text Conditioning steps</em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="summary">Summary</h2>
-<p>To summarize how stable diffusion creates images here are the steps:</p>
-<ol>
-<li>Given a text or image we generate a random vectors in the latent space this is done through VAE encoder.</li>
-<li>U-NET then predicts the noise that is added to this vector.</li>
-<li>Given the amount of noise that is added we remove the noise for the latent vector.</li>
-<li>Steps 2 and 3 are repeated for a certain number of sampling steps</li>
-<li>Finally, the decoder of VAE converts the latent image back to pixel space. This is the image you get after running Stable Diffusion.</li>
-</ol>
-<h2 id="references">References</h2>
-<ol>
-<li>Andrew, “How does Stable Diffusion work?,” Stable Diffusion Art, Jun. 10, 2024. https://stable-diffusion-art.com/how-stable-diffusion-work/</li>
-<li>GeeksforGeeks, “UNET Architecture explained,” GeeksforGeeks, Jun. 08, 2023. https://www.geeksforgeeks.org/u-net-architecture-explained/</li>
-<li>O. Ronneberger, P. Fischer, and T. Brox, “U-NET: Convolutional Networks for Biomedical Image Segmentation,” arXiv.org, May 18, 2015. https://arxiv.org/abs/1505.04597</li>
-<li>Wikipedia contributors, “Manifold hypothesis,” Wikipedia, Aug. 01, 2024. https://en.wikipedia.org/wiki/Manifold_hypothesis</li>
+<li>A. Acharya, “LLAVA, LLAVA-1.5, and LLAVA-NeXT(1.6) explained,” Nov. 04, 2024. https://encord.com/blog/llava-large-language-vision-assistant/</li>
+<li>Wikipedia contributors, “Llama (language model),” Wikipedia, Jan. 01, 2025. https://en.wikipedia.org/wiki/Llama_(language_model)</li>
 </ol>
 
 
