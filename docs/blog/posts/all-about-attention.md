@@ -81,3 +81,9 @@ Queries, Keys, and Values are computed as linear transformations of the input em
   Q = XW_Q, \quad K = XW_K, \quad V = XW_V
   \]
   where \(X\) is the input, and \(W_Q\), \(W_K\), \(W_V\) are learned weight matrices.
+
+## Summary
+
+1. Attention is a layer that lets a model focus on what's important
+2. Query, Values and Keys are used for information retrieval insde the attention layer.
+
