@@ -554,6 +554,141 @@ Efficient deployment and inference with SGLang.</p>
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2025-01-09 00:00:00+00:00">January 9, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/artificial-neural-networks/" class="md-meta__link">Artificial Neural Networks</a>, 
+              <a href="category/artificial-intelligence/" class="md-meta__link">Artificial Intelligence</a>, 
+              <a href="category/llms/" class="md-meta__link">LLMs</a>, 
+              <a href="category/hugging-face/" class="md-meta__link">Hugging Face</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="introduction-to-hugging-face"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/">Introduction to Hugging Face</a></h2>
+<h3 id="overview"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#overview">Overview</a></h3>
+<p>Hugging Face is a leading platform in natural language processing (NLP) and machine learning (ML), providing tools, libraries, and models for developers and researchers. It is widely known for its open-source libraries and community contributions, facilitating the use of pre-trained models and accelerating ML workflows.</p>
+<h4 id="applications-of-hugging-face"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#applications-of-hugging-face">Applications of Hugging Face:</a></h4>
+<ul>
+<li>Sentiment Analysis</li>
+<li>Text Summarization</li>
+<li>Machine Translation</li>
+<li>Chatbots and Virtual Assistants</li>
+<li>Image Captioning (via VLMs)</li>
+<li>Healthcare, legal, and financial domain-specific NLP solutions</li>
+</ul>
+<h4 id="why-hugging-face-matters"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#why-hugging-face-matters">Why Hugging Face Matters:</a></h4>
+<p>Hugging Face democratizes access to advanced AI tools, fostering innovation and collaboration. With its open-source ethos, it has become a go-to resource for researchers and developers alike, empowering them to tackle complex challenges in AI and ML effectively.</p>
+<p>Hugging Face can be used with both TensorFlow and PyTorch.</p>
+<h3 id="hugging-face-autoclasses"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#hugging-face-autoclasses">Hugging Face AutoClasses</a></h3>
+<p>Hugging Face AutoClasses are an abstraction that simplifies the use of pre-trained models for various tasks, such as text classification, translation, and summarization. They automatically select the appropriate architecture and configuration for a given pre-trained model from the Hugging Face Model Hub.</p>
+<h4 id="commonly-used-autoclasses"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#commonly-used-autoclasses">Commonly Used AutoClasses:</a></h4>
+<h5 id="1-automodel"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#1-automodel">1. <strong><code>AutoModel</code></strong></a></h5>
+<ul>
+<li>For loading generic pre-trained models.</li>
+<li>Use case: Extracting hidden states or embeddings.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModel</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="2-automodelforsequenceclassification"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#2-automodelforsequenceclassification">2. <strong><code>AutoModelForSequenceClassification</code></strong></a></h5>
+<ul>
+<li>For text classification tasks.</li>
+<li>Use case: Sentiment analysis, spam detection, etc.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForSequenceClassification</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="3-autotokenizer"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#3-autotokenizer">3. <strong><code>AutoTokenizer</code></strong></a></h5>
+<ul>
+<li>Automatically loads the appropriate tokenizer for the specified model.</li>
+<li>Handles tokenization, encoding, and decoding.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoTokenizer</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="4-automodelforquestionanswering"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#4-automodelforquestionanswering">4. <strong><code>AutoModelForQuestionAnswering</code></strong></a></h5>
+<ul>
+<li>For question-answering tasks.</li>
+<li>Use case: Extracting answers from context.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForQuestionAnswering</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForQuestionAnswering</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-large-uncased-whole-word-masking-finetuned-squad&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="5-automodelforseq2seqlm"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#5-automodelforseq2seqlm">5. <strong><code>AutoModelForSeq2SeqLM</code></strong></a></h5>
+<ul>
+<li>For sequence-to-sequence tasks like translation or summarization.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForSeq2SeqLM</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSeq2SeqLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;t5-small&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="6-automodelfortokenclassification"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#6-automodelfortokenclassification">6. <strong><code>AutoModelForTokenClassification</code></strong></a></h5>
+<ul>
+<li>For tasks like Named Entity Recognition (NER) or Part-of-Speech (POS) tagging.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForTokenClassification</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForTokenClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;dbmdz/bert-large-cased-finetuned-conll03-english&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="7-automodelforcausallm"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#7-automodelforcausallm">7. <strong><code>AutoModelForCausalLM</code></strong></a></h5>
+<ul>
+<li>For language modeling tasks that generate text.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForCausalLM</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;gpt2&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h5 id="8-autoprocessor-for-multimodal-models"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#8-autoprocessor-for-multimodal-models">8. <strong><code>AutoProcessor</code></strong><strong> (for Multimodal Models)</strong></a></h5>
+<ul>
+<li>Loads processors for tasks involving images, text, or both.</li>
+<li>Example: Vision-Language Models (e.g., CLIP).</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoProcessor</span>
+<span class="n">processor</span> <span class="o">=</span> <span class="n">AutoProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;openai/clip-vit-base-patch32&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="use-cases-in-projects"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#use-cases-in-projects">Use Cases in Projects:</a></h4>
+<ul>
+<li><strong>VLMs</strong>: Use <code>AutoProcessor</code> and <code>AutoModel</code> for image-text embedding or image captioning tasks.</li>
+<li><strong>Healthcare</strong>: Use <code>AutoModelForSequenceClassification</code> for text classification tasks like predicting medical conditions based on clinical notes.</li>
+</ul>
+<h3 id="why-use-transformers"><a class="toclink" href="2025/01/09/introduction-to-hugging-face/#why-use-transformers">Why use Transformers?</a></h3>
+<p>Traditionally to process text we RNNS but as the window size increases we see the problem of vanishing gradients. Additionally, they are slow. Transformers are able to address these concerns.</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2025-01-07 00:00:00+00:00">January 7, 2025</time></li>
         
           <li class="md-meta__item">
@@ -2237,91 +2372,6 @@ x' = z*\sigma' + \mu'
 
 <div class="codehilite"><pre><span></span><code>
 </code></pre></div>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/39479720?s=400&u=17af60674de436a0ef97d3e528947194708b03bd&v=4" alt="Alton Lavin D'souza">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-31 00:00:00+00:00">May 31, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/llms/" class="md-meta__link">LLMs</a>, 
-              <a href="category/nlp/" class="md-meta__link">NLP</a>, 
-              <a href="category/vectordb/" class="md-meta__link">VectorDB</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="why-go-for-rag"><a class="toclink" href="2024/05/31/why-go-for-rag/">Why go for RAG?</a></h2>
-<h3 id="overview"><a class="toclink" href="2024/05/31/why-go-for-rag/#overview">Overview</a></h3>
-<p>In this project we choose a foundational model i.e. GPT or BERT and create an API that makes it easy to interact with the LLM.</p>
-<h3 id="foundational-model"><a class="toclink" href="2024/05/31/why-go-for-rag/#foundational-model">Foundational model</a></h3>
-<p>We want a foundational model that can interact in the medical context. Some of the models considered here are :</p>
-<ul>
-<li><a href="https://huggingface.co/ruslanmv/Medical-Llama3-8B">Medical Llama-8b</a> - Optimized to address health related inquiries and trained on comprehensive medical chatbot dataset (Apache License 2.0) foundational model used here Meta-Llama-3-8b</li>
-<li><a href="https://huggingface.co/aaditya/Llama3-OpenBioLLM-8B">Llama3-OpenBioLLM-8B</a> - fine tuned on corpus of high quality of biomedical data, 8 billion parameters. Incorporated the DPO data set</li>
-</ul>
-<h3 id="approaches"><a class="toclink" href="2024/05/31/why-go-for-rag/#approaches">Approaches</a></h3>
-<p>To create a chat bot we have 2 approaches:</p>
-<ul>
-<li>Fine tuning existing foundational models on medical data set</li>
-<li>Create a Retrieval augmented generation framework which is used for retrieving facts from an external knowledge</li>
-</ul>
-<p><img alt="Comparisons" src="pics/Screenshot%202024-05-31%20122720.png" /></p>
-<h4 id="fine-tuning-existing-foundation-models-on-medical-data-set"><a class="toclink" href="2024/05/31/why-go-for-rag/#fine-tuning-existing-foundation-models-on-medical-data-set">Fine tuning existing foundation models on medical data set</a></h4>
-<ul>
-<li>Incorporates the additional knowledge into the model itself</li>
-<li>Offers a precise, succinct output that is attuned to brevity.</li>
-<li>High initial cost</li>
-<li>Minimum input size </li>
-</ul>
-<h4 id="retrieval-augmented-generation"><a class="toclink" href="2024/05/31/why-go-for-rag/#retrieval-augmented-generation">Retrieval Augmented Generation</a></h4>
-<ul>
-<li>Augments the prompt with external data</li>
-<li>Provides an additional context during question answering.</li>
-<li>Possible collision among similar snippets during the retrieval process</li>
-<li>RAG has larger input size due to inclusion of context information ,output information tends to be more verbose and harder to steer.</li>
-</ul>
-<h4 id="experiment-conclusion"><a class="toclink" href="2024/05/31/why-go-for-rag/#experiment-conclusion">Experiment Conclusion</a></h4>
-<p>GPT learned 47% of new knowledge with fine-tuning with RAG this number goes upto 72% and 74%.</p>
-<h3 id="preferred-approach"><a class="toclink" href="2024/05/31/why-go-for-rag/#preferred-approach">Preferred approach</a></h3>
-<h4 id="what-we-want"><a class="toclink" href="2024/05/31/why-go-for-rag/#what-we-want">What we want?</a></h4>
-<ul>
-<li>Fast Deployment option</li>
-</ul>
-<h4 id="choice-of-approach"><a class="toclink" href="2024/05/31/why-go-for-rag/#choice-of-approach">Choice of Approach</a></h4>
-<p>RAG allows to create embeddings easily and allows for a fast deployment option.</p>
-<h3 id="architecture"><a class="toclink" href="2024/05/31/why-go-for-rag/#architecture">Architecture</a></h3>
-<p><img alt="Architecture" src="pics/AI_copilot_service.drawio.png" /></p>
-<h3 id="references"><a class="toclink" href="2024/05/31/why-go-for-rag/#references">References</a></h3>
-<ul>
-<li>https://arxiv.org/pdf/2401.08406</li>
-</ul>
     
   </div>
 </article>

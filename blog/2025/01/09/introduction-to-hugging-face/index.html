@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://Alton1998.github.io/alton.github.io/blog/2025/01/07/stable-diffusion-understanding/">
+        <link rel="canonical" href="https://Alton1998.github.io/alton.github.io/blog/2025/01/09/introduction-to-hugging-face/">
       
       
-        <link rel="prev" href="../../../../2024/08/26/computational-graphs/">
+        <link rel="prev" href="../../07/stable-diffusion-understanding/">
       
       
-        <link rel="next" href="../../09/introduction-to-hugging-face/">
+        <link rel="next" href="../llava/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Stable Diffusion Understanding - Alton Lavin D'Souza</title>
+        <title>Introduction to Hugging Face - Alton Lavin D'Souza</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stable-diffusion-understanding" class="md-skip">
+        <a href="#introduction-to-hugging-face" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stable Diffusion Understanding
+              Introduction to Hugging Face
             
           </span>
         </div>
@@ -452,31 +452,22 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capabilities-of-stable-diffussion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Capabilities of Stable Diffussion
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Capabilities of Stable Diffussion">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#forward-diffusion" class="md-nav__link">
+  <a href="#applications-of-hugging-face" class="md-nav__link">
     <span class="md-ellipsis">
-      Forward Diffusion
+      Applications of Hugging Face:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reverse-diffusion" class="md-nav__link">
+  <a href="#why-hugging-face-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Reverse Diffusion
+      Why Hugging Face Matters:
     </span>
   </a>
   
@@ -488,64 +479,106 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#training-process-of-stable-diffusion" class="md-nav__link">
+  <a href="#hugging-face-autoclasses" class="md-nav__link">
     <span class="md-ellipsis">
-      Training process of Stable Diffusion
+      Hugging Face AutoClasses
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Training process of Stable Diffusion">
+    <nav class="md-nav" aria-label="Hugging Face AutoClasses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#u-net-model" class="md-nav__link">
+  <a href="#commonly-used-autoclasses" class="md-nav__link">
     <span class="md-ellipsis">
-      U-Net Model
+      Commonly Used AutoClasses:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commonly Used AutoClasses:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-automodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. AutoModel
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cost-of-running-the-model" class="md-nav__link">
+  <a href="#2-automodelforsequenceclassification" class="md-nav__link">
     <span class="md-ellipsis">
-      Cost of running the model
+      2. AutoModelForSequenceClassification
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#variational-autoencoders" class="md-nav__link">
+  <a href="#3-autotokenizer" class="md-nav__link">
     <span class="md-ellipsis">
-      Variational Autoencoders
+      3. AutoTokenizer
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#does-using-latent-space-cause-loss-in-information" class="md-nav__link">
+  <a href="#4-automodelforquestionanswering" class="md-nav__link">
     <span class="md-ellipsis">
-      Does using latent space cause loss in information?
+      4. AutoModelForQuestionAnswering
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reverse-diffusion-in-latent-space" class="md-nav__link">
+  <a href="#5-automodelforseq2seqlm" class="md-nav__link">
     <span class="md-ellipsis">
-      Reverse Diffusion in Latent Space
+      5. AutoModelForSeq2SeqLM
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#text-conditioning" class="md-nav__link">
+  <a href="#6-automodelfortokenclassification" class="md-nav__link">
     <span class="md-ellipsis">
-      Text Conditioning
+      6. AutoModelForTokenClassification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-automodelforcausallm" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. AutoModelForCausalLM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-autoprocessor-for-multimodal-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. AutoProcessor (for Multimodal Models)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-in-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases in Projects:
     </span>
   </a>
   
@@ -557,18 +590,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-use-transformers" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
+      Why use Transformers?
     </span>
   </a>
   
@@ -630,7 +654,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-01-07 00:00:00+00:00" class="md-ellipsis">January 7, 2025</time>
+                        <time datetime="2025-01-09 00:00:00+00:00" class="md-ellipsis">January 9, 2025</time>
                       </div>
                     </li>
                     
@@ -643,9 +667,8 @@
                             
                               <a href="../../../../category/artificial-neural-networks/">Artificial Neural Networks</a>, 
                               <a href="../../../../category/artificial-intelligence/">Artificial Intelligence</a>, 
-                              <a href="../../../../category/computer-vision/">Computer Vision</a>, 
-                              <a href="../../../../category/image-generation/">Image Generation</a>, 
-                              <a href="../../../../category/stable-diffusion/">Stable Diffusion</a></span>
+                              <a href="../../../../category/llms/">LLMs</a>, 
+                              <a href="../../../../category/hugging-face/">Hugging Face</a></span>
                         </div>
                       </li>
                     
@@ -656,7 +679,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -676,190 +699,100 @@
         
 
 
-<h1 id="stable-diffusion-understanding">Stable Diffusion Understanding</h1>
+<h1 id="introduction-to-hugging-face">Introduction to Hugging Face</h1>
 <h2 id="overview">Overview</h2>
-<p>Stable Diffusion has become so popular for image generation. It is the go to model for developers. It is a latent diffusion model that generates AI images for text. Sometimes you can also use an image and text to generate images.</p>
-<h2 id="capabilities-of-stable-diffussion">Capabilities of Stable Diffussion</h2>
-<p>Stable diffusion is a text-to-image model. Given a text it will produce an image.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Stable Diffusion Text to Image" src="../../../../pics/stable_diffusion.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 1:Basic Workflow of Stable Diffusion</em></td>
-</tr>
-</tbody>
-</table>
-<p>Stable diffusion belongs to a class of deep learning models called diffusion models. These are models that are capable of generating new data that is similar to the training data. These models are so named since they use diffusion based mechanics we see in physics. We see two types of diffusion here:
-1. Forward Diffusion
-2. Reverse Diffusion</p>
-<h3 id="forward-diffusion">Forward Diffusion</h3>
-<p>Forward diffusion is the process that adds noise to an image in steps such that it gradually becomes unrecognizable. It is similar to the process where you drop ink on tissue paper the ink eventually spreads out.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Forward Diffusion Process" src="../../../../pics/image.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 2: Stable diffusion Forward diffusion process taken from <a href="https://stable-diffusion-art.com/how-stable-diffusion-work/">here</a></em></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Forward Diffusion Process" src="../../../../pics/Analogy_pen_ink.jpg" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 3: Drop of ink from the nib of the pen  spreading on the tissue paper (AI Generated from LLama 3.2)</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="reverse-diffusion">Reverse Diffusion</h3>
-<p>Reverse diffusion is the opposite of Forward Diffusion. So rather than adding noise, it removes noise gradually from an image.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Reverse Diffusion Process" src="../../../../pics/reverse_diffusion_process.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 4: Stable diffusion Reverse diffusion process taken from <a href="https://stable-diffusion-art.com/how-stable-diffusion-work/">here</a></em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="training-process-of-stable-diffusion">Training process of Stable Diffusion</h2>
-<p>Adding noise is simple process and does not require explicit training. But how do get the old image back from a noisy image. We need to remove the noise from the image. To put it mathematically.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="Reverse Diffusion Process Equation" src="../../../../pics/Equation%20for%20Reverse%20Diffusion.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 5: Stable diffusion Reverse diffusion High Level Equation</em></td>
-</tr>
-</tbody>
-</table>
-<p>So what we need to do is predict the amount of noise that needs to be removed to produce the original almost noiseless image. We use a noise predictor which for stable diffusion is a U-net model.</p>
-<h3 id="u-net-model">U-Net Model</h3>
-<p>It is a widely used deep learning model for image segmentation. The primary purpose of the model was t o address the challenge of limited data in healthcare. This network allows you to use a smalled dataset for training while maintaining the speed and accuracy of the model.</p>
-<p>The U-Net model consists of 2 paths:</p>
-<ol>
-<li>Contracting Path </li>
-<li>Expansive Path</li>
-</ol>
-<p>The contracting path consist of encoders, that capture the relevant information and encode it. The expansive path contains decoders the decode the encoded information and also use the information from the contracting path via the skip connections to generate a segmentation map.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="U-net Model" src="../../../../pics/U-net.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 6: U-net model taken from <a href="https://www.geeksforgeeks.org/u-net-architecture-explained/">here</a></em></td>
-</tr>
-</tbody>
-</table>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="U-net Model Encoder" src="../../../../pics/U-net%20Encoders.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 7: U-net model Encoder Architecture</em></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<p><center></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="U-net Model Decoder" src="../../../../pics/U-net-decoder.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 8: U-net model Decoder Architecture</em></td>
-</tr>
-</tbody>
-</table>
-<p></center></p>
-<h3 id="cost-of-running-the-model">Cost of running the model</h3>
-<p>Diffusion models like Google’s Imagen and Open AI’s DALL-E are in pixel space. They have used some tricks to make the model faster but still not enough. Whereas, Stable Diffusion is a latent diffusion model. Instead of operating in the high-dimensional image space, it first compresses the image into the latent space. The latent space is 48 times smaller so it reaps the benefit of crunching a lot fewer numbers. That’s why it’s a lot faster. We use a Variational Autonencoders (VAE).</p>
-<p>To summarise we use U-net in the image space for faster generation we make use of the latent space, for this we use VAE. U-Net is still used as the noise predictor.</p>
-<h3 id="variational-autoencoders">Variational Autoencoders</h3>
-<p>Like U-net these also have encoders and decodes, the noise is added to latent vector and is later decoded to generate the images.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="VAE overview" src="../../../../pics/VAE_working.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 9: VAE Working</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="does-using-latent-space-cause-loss-in-information">Does using latent space cause loss in information?</h3>
-<p>It might seem that while using the latent space we are loosing a lot of information, however thats not the case. It might seem that images are random but they are regular in nature. For Example: A face of any species has a mouth, ears and a nose. This is better explained by the Manifold Hypothesis.</p>
-<h3 id="reverse-diffusion-in-latent-space">Reverse Diffusion in Latent Space</h3>
-<p>Here’s how latent reverse diffusion in Stable Diffusion works.</p>
-<ol>
-<li>A random latent space matrix is generated.</li>
-<li>The noise predictor estimates the noise of the latent matrix.</li>
-<li>The estimated noise is then subtracted from the latent matrix.</li>
-<li>Steps 2 and 3 are repeated up to specific sampling steps.</li>
-<li>The decoder of VAE converts the latent matrix to the final image.</li>
-</ol>
-<p>The noised predictor here is still U-Net.</p>
-<p>So far we have seen only image generation process which is called the unconditioned process. In the following sections we will see how we can condition for text i.e. given a text the model should generate an image.</p>
-<h3 id="text-conditioning">Text Conditioning</h3>
-<p>To be able to generate images using the text prompts we need to perform the preprocessing steps in figure 10. In the figure the Tokenizer and Embedder are implemented by a Contrastive Language-Image Pretraining model (CLIP). It should be noted here since we are dealling with a text input the convulutional layers are replaced by cross attention layers to help establish relationship between different words in a sentence. Attention layers are the new feature extracture layers, they are going to replace RNNs and CNNs as they are faster at processing and get rid of any inductive biases due the structure of neural network.</p>
-<p>There are other forms of conditioning as well</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><img alt="VAE overview" src="../../../../pics/Stable_diffusion_text_conditioning.png" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><em>Figure 10: Text Conditioning steps</em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="summary">Summary</h2>
-<p>To summarize how stable diffusion creates images here are the steps:</p>
-<ol>
-<li>Given a text or image we generate a random vectors in the latent space this is done through VAE encoder.</li>
-<li>U-NET then predicts the noise that is added to this vector.</li>
-<li>Given the amount of noise that is added we remove the noise for the latent vector.</li>
-<li>Steps 2 and 3 are repeated for a certain number of sampling steps</li>
-<li>Finally, the decoder of VAE converts the latent image back to pixel space. This is the image you get after running Stable Diffusion.</li>
-</ol>
-<h2 id="references">References</h2>
-<ol>
-<li>Andrew, “How does Stable Diffusion work?,” Stable Diffusion Art, Jun. 10, 2024. https://stable-diffusion-art.com/how-stable-diffusion-work/</li>
-<li>GeeksforGeeks, “UNET Architecture explained,” GeeksforGeeks, Jun. 08, 2023. https://www.geeksforgeeks.org/u-net-architecture-explained/</li>
-<li>O. Ronneberger, P. Fischer, and T. Brox, “U-NET: Convolutional Networks for Biomedical Image Segmentation,” arXiv.org, May 18, 2015. https://arxiv.org/abs/1505.04597</li>
-<li>Wikipedia contributors, “Manifold hypothesis,” Wikipedia, Aug. 01, 2024. https://en.wikipedia.org/wiki/Manifold_hypothesis</li>
-</ol>
+<p>Hugging Face is a leading platform in natural language processing (NLP) and machine learning (ML), providing tools, libraries, and models for developers and researchers. It is widely known for its open-source libraries and community contributions, facilitating the use of pre-trained models and accelerating ML workflows.</p>
+<h3 id="applications-of-hugging-face">Applications of Hugging Face:</h3>
+<ul>
+<li>Sentiment Analysis</li>
+<li>Text Summarization</li>
+<li>Machine Translation</li>
+<li>Chatbots and Virtual Assistants</li>
+<li>Image Captioning (via VLMs)</li>
+<li>Healthcare, legal, and financial domain-specific NLP solutions</li>
+</ul>
+<h3 id="why-hugging-face-matters">Why Hugging Face Matters:</h3>
+<p>Hugging Face democratizes access to advanced AI tools, fostering innovation and collaboration. With its open-source ethos, it has become a go-to resource for researchers and developers alike, empowering them to tackle complex challenges in AI and ML effectively.</p>
+<p>Hugging Face can be used with both TensorFlow and PyTorch.</p>
+<h2 id="hugging-face-autoclasses">Hugging Face AutoClasses</h2>
+<p>Hugging Face AutoClasses are an abstraction that simplifies the use of pre-trained models for various tasks, such as text classification, translation, and summarization. They automatically select the appropriate architecture and configuration for a given pre-trained model from the Hugging Face Model Hub.</p>
+<h3 id="commonly-used-autoclasses">Commonly Used AutoClasses:</h3>
+<h4 id="1-automodel">1. <strong><code>AutoModel</code></strong></h4>
+<ul>
+<li>For loading generic pre-trained models.</li>
+<li>Use case: Extracting hidden states or embeddings.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModel</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="2-automodelforsequenceclassification">2. <strong><code>AutoModelForSequenceClassification</code></strong></h4>
+<ul>
+<li>For text classification tasks.</li>
+<li>Use case: Sentiment analysis, spam detection, etc.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForSequenceClassification</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="3-autotokenizer">3. <strong><code>AutoTokenizer</code></strong></h4>
+<ul>
+<li>Automatically loads the appropriate tokenizer for the specified model.</li>
+<li>Handles tokenization, encoding, and decoding.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoTokenizer</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-base-uncased&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="4-automodelforquestionanswering">4. <strong><code>AutoModelForQuestionAnswering</code></strong></h4>
+<ul>
+<li>For question-answering tasks.</li>
+<li>Use case: Extracting answers from context.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForQuestionAnswering</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForQuestionAnswering</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;bert-large-uncased-whole-word-masking-finetuned-squad&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="5-automodelforseq2seqlm">5. <strong><code>AutoModelForSeq2SeqLM</code></strong></h4>
+<ul>
+<li>For sequence-to-sequence tasks like translation or summarization.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForSeq2SeqLM</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSeq2SeqLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;t5-small&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="6-automodelfortokenclassification">6. <strong><code>AutoModelForTokenClassification</code></strong></h4>
+<ul>
+<li>For tasks like Named Entity Recognition (NER) or Part-of-Speech (POS) tagging.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForTokenClassification</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForTokenClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;dbmdz/bert-large-cased-finetuned-conll03-english&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="7-automodelforcausallm">7. <strong><code>AutoModelForCausalLM</code></strong></h4>
+<ul>
+<li>For language modeling tasks that generate text.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoModelForCausalLM</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;gpt2&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="8-autoprocessor-for-multimodal-models">8. <strong><code>AutoProcessor</code></strong><strong> (for Multimodal Models)</strong></h4>
+<ul>
+<li>Loads processors for tasks involving images, text, or both.</li>
+<li>Example: Vision-Language Models (e.g., CLIP).</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoProcessor</span>
+<span class="n">processor</span> <span class="o">=</span> <span class="n">AutoProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;openai/clip-vit-base-patch32&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="use-cases-in-projects">Use Cases in Projects:</h3>
+<ul>
+<li><strong>VLMs</strong>: Use <code>AutoProcessor</code> and <code>AutoModel</code> for image-text embedding or image captioning tasks.</li>
+<li><strong>Healthcare</strong>: Use <code>AutoModelForSequenceClassification</code> for text classification tasks like predicting medical conditions based on clinical notes.</li>
+</ul>
+<h2 id="why-use-transformers">Why use Transformers?</h2>
+<p>Traditionally to process text we RNNS but as the window size increases we see the problem of vanishing gradients. Additionally, they are slow. Transformers are able to address these concerns.</p>
 
 
 
