@@ -541,7 +541,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -615,8 +615,25 @@
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Query Key maping" src="../../../../pics/Query_key_mapping.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 2: Example mapping similar query-key value pairs</em></td>
+</tr>
+</tbody>
+</table>
 <p></center></p>
 <p>Lets try to understand this with an analogy. Consider the example where you are visiting a library and ask for a book. You say "I want a book about science fiction", this is analogous to Query. The library uses the description of each book (Key) in the library that is similar to the customers query to recommend books that fit the genre of science fiction and provides the list of these books to the customer (Value).</p>
+<p>Queries, Keys, and Values are computed as linear transformations of the input embeddings (or outputs of the previous layer):
+  [
+  Q = XW_Q, \quad K = XW_K, \quad V = XW_V
+  ]
+  where <span class="arithmatex">\(X\)</span> is the input, and <span class="arithmatex">\(W_Q\)</span>, <span class="arithmatex">\(W_K\)</span>, <span class="arithmatex">\(W_V\)</span> are learned weight matrices.</p>
 
 
 
