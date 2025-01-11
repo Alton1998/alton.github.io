@@ -30,6 +30,8 @@ Given a Query and Key we calculate the similarity, this allows us to use the key
 
 The above equation results in matrix describing how much importance a query gives to a key. In the equation `Q` is the query and `K` is the key.
 
+
+
 The next step is scaling, we perform scaling to avoid large values, larger values require more resources for computation, So now the equation takes the following shape:
 
 \[
@@ -66,7 +68,16 @@ Overall the equation would look something like this:
 |:--:| 
 | *Figure 2: Flow of calculating Attention in Scaled Dot Product Attention* |
 
+| ![Query Key maping](./pics/Query_key_mapping.png) | 
+|:--:| 
+| *Figure 2: Example mapping similar query-key value pairs* |
 
 </center>
 
 Lets try to understand this with an analogy. Consider the example where you are visiting a library and ask for a book. You say "I want a book about science fiction", this is analogous to Query. The library uses the description of each book (Key) in the library that is similar to the customers query to recommend books that fit the genre of science fiction and provides the list of these books to the customer (Value).
+
+Queries, Keys, and Values are computed as linear transformations of the input embeddings (or outputs of the previous layer):
+  \[
+  Q = XW_Q, \quad K = XW_K, \quad V = XW_V
+  \]
+  where \(X\) is the input, and \(W_Q\), \(W_K\), \(W_V\) are learned weight matrices.
