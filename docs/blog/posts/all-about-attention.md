@@ -77,9 +77,13 @@ Overall the equation would look something like this:
 Lets try to understand this with an analogy. Consider the example where you are visiting a library and ask for a book. You say "I want a book about science fiction", this is analogous to Query. The library uses the description of each book (Key) in the library that is similar to the customers query to recommend books that fit the genre of science fiction and provides the list of these books to the customer (Value).
 
 Queries, Keys, and Values are computed as linear transformations of the input embeddings (or outputs of the previous layer):
-  \[
-  Q = XW_Q, \quad K = XW_K, \quad V = XW_V
-  \]
+
+  $$
+Q = XW_Q, \quad K = XW_K, \quad V = XW_V
+$$
+
+
+
   where \(X\) is the input, and \(W_Q\), \(W_K\), \(W_V\) are learned weight matrices.
 
 ## Summary
